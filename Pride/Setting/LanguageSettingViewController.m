@@ -42,14 +42,14 @@
     headImageView.contentMode = UIViewContentModeScaleAspectFit;
     
     CGFloat height = 45;
-    self.chineseSelection = [[UIImageView alloc]initWithFrame:CGRectMake(20, SCREEN_HEIGHT *0.75 - height, SCREEN_WIDTH - 40, 57)];
-    self.chineseSelection.image = [[UIImage imageNamed:@"SelecBG"] resizableImageWithCapInsets:UIEdgeInsetsMake(23.5, (SCREEN_WIDTH - 40)/2, 23.5, (SCREEN_WIDTH - 40)/2)];
+    self.chineseSelection = [[UIImageView alloc]initWithFrame:CGRectMake(20, SCREEN_HEIGHT *0.75 - height, SCREEN_WIDTH - 40, (SCREEN_WIDTH - 40) * 78 / 612)];
+    self.chineseSelection.image = [UIImage imageNamed:@"SelecBG"] ;
     self.chineseSelection.userInteractionEnabled = YES;
     UITapGestureRecognizer *chineseTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(selectChinese)];
     [self.chineseSelection addGestureRecognizer:chineseTap];
     [self.view addSubview:self.chineseSelection];
     
-    self.englishSelection = [[UIImageView alloc]initWithFrame:CGRectMake(20, SCREEN_HEIGHT *0.75+10 , SCREEN_WIDTH - 40, 57)];
+    self.englishSelection = [[UIImageView alloc]initWithFrame:CGRectMake(20, SCREEN_HEIGHT *0.75+10 , SCREEN_WIDTH - 40, (SCREEN_WIDTH - 40) * 78 / 612 )];
     self.englishSelection.image = [UIImage imageNamed:@"UnSelecBG"];
     self.englishSelection.userInteractionEnabled = YES;
     UITapGestureRecognizer *englishTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(selectEnglish)];
@@ -80,7 +80,7 @@
 #pragma mark --  private
 
 -(void)selectChinese{
-    self.chineseSelection.image = [[UIImage imageNamed:@"SelecBG"] resizableImageWithCapInsets:UIEdgeInsetsMake(23.5, (SCREEN_WIDTH - 40)/2, 23.5, (SCREEN_WIDTH - 40)/2)];
+    self.chineseSelection.image = [UIImage imageNamed:@"SelecBG"];
     self.englishSelection.image = [UIImage imageNamed:@"UnSelecBG"];
     self.englishLabel.textColor = BTN_COLOR;
     self.chineseLabel.textColor = [UIColor whiteColor];
@@ -90,7 +90,7 @@
 
 -(void)selectEnglish{
     self.chineseSelection.image = [UIImage imageNamed:@"UnSelecBG"];
-    self.englishSelection.image = [[UIImage imageNamed:@"SelecBG"] resizableImageWithCapInsets:UIEdgeInsetsMake(23.5, (SCREEN_WIDTH - 40)/2, 23.5, (SCREEN_WIDTH - 40)/2)];
+    self.englishSelection.image = [UIImage imageNamed:@"SelecBG"];
     self.englishLabel.textColor = [UIColor whiteColor];
     self.chineseLabel.textColor = BTN_COLOR;
     [self showAlertTitle:@"Tint" message:@"Use English?" language:1];
