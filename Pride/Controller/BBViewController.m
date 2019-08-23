@@ -508,17 +508,17 @@
     
 }
 
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//
-//    DeviceViewController *deviceVC = [[DeviceViewController alloc] initWithPeripheral:nil
-//                                                                       characteristic:nil
-//                                                                           DeviceType:self.deviceType language:self.language];
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+
+    DeviceViewController *deviceVC = [[DeviceViewController alloc] initWithPeripheral:nil
+                                                                       characteristic:nil
+                                                                           DeviceType:self.deviceType language:self.language];
+    [self.navigationController pushViewController:deviceVC animated:YES];
+
+//    DeviceViewController *deviceVC = [[DeviceViewController alloc]init];
 //    [self.navigationController pushViewController:deviceVC animated:YES];
-//
-////    DeviceViewController *deviceVC = [[DeviceViewController alloc]init];
-////    [self.navigationController pushViewController:deviceVC animated:YES];
-//
-//}
+
+}
 
 
 

@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "control_armchair_head_down_normal.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "control_armchair_head_down_normal@2x.png",
+      "filename" : "chair3@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "control_armchair_head_down_normal@3x.png",
       "scale" : "3x"
     }
   ],
