@@ -51,8 +51,8 @@
 }
 - (instancetype)initWithPeripheral:(CBPeripheral *)peripheral characteristic:(CBCharacteristic *)characteristic DeviceType:(DeviceType)deviceType language:(NSInteger)language
 {
-//    self.deviceType = deviceType;
-    self.deviceType = DeviceType_3_chair;
+    self.deviceType = deviceType;
+//    self.deviceType = DeviceType_3_chair;
     self.language = language;
     self = [super init];
     if (self) {
