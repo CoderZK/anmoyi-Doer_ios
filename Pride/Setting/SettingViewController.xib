@@ -30,7 +30,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsk-ps-FSu">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" backgroundImage="UnSelecBG"/>
+                            <state key="normal" backgroundImage="SelecBG"/>
                             <connections>
                                 <action selector="ibaShowFunctionDesc:" destination="-1" eventType="touchUpInside" id="G0g-33-Mc3"/>
                             </connections>
@@ -104,8 +104,9 @@
         </view>
     </objects>
     <resources>
+        <image name="SelecBG" width="306" height="39"/>
         <image name="UnSelecBG" width="306" height="39"/>
         <image name="logo" width="100.5" height="28.5"/>
-        <image name="main_bg" width="360" height="640"/>
+        <image name="main_bg" width="1080" height="1920"/>
     </resources>
 </document>

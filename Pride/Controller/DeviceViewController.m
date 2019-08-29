@@ -12,6 +12,7 @@
 #import "SendDataTool.h"
 #import "BabyBluetooth.h"
 #import "MBProgressHUD.h"
+#import "UIView+BSExtension.h"
 
 @interface DeviceViewController ()<UIGestureRecognizerDelegate>
 
@@ -203,12 +204,18 @@
     [self.view addSubview:titleImageView];
     titleImageView.frame = CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, SCREEN_WIDTH, CGRectGetHeight(titleImageView.frame));
     
-    self.titleLB = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleImageView.frame) + 3 , SCREEN_WIDTH, 18)];
+    self.titleLB = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleImageView.frame) + 5 , 10 , 18)];
     self.titleLB.font =[UIFont systemFontOfSize:14];
     self.titleLB.textColor = [UIColor whiteColor];
     self.titleLB.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.titleLB];
     self.titleLB.text = self.prideModel.showName;
+    [self.titleLB sizeToFit];
+    self.titleLB.height = 18;
+    self.titleLB.x = (SCREEN_WIDTH - self.titleLB.width)/2.0 + 13 ;
+    
+    
+    
 
     
 //    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 20, SCREEN_WIDTH, 44)];
@@ -222,7 +229,7 @@
     CGFloat bWidth = 10;
     CGFloat bottomBtnWidth = (SCREEN_WIDTH - aWidth*4 - bWidth *2)/3;
     
-    self.editBt = [[UIButton alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 50)/2, 0.8 *SCREEN_WIDTH + 60, 50, 50)];
+    self.editBt = [[UIButton alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - self.titleLB.width )/2.0 - 13 , CGRectGetMaxY(titleImageView.frame) + 5   , 20, 20)];
 //    [self.editBt setBackgroundColor:[UIColor redColor]];
 //    [self.editBt setImage:[UIImage imageNamed:@"edit"] forState:UIControlStateNormal];
     [self.editBt setBackgroundImage:[UIImage imageNamed:@"edit"] forState:UIControlStateNormal];
@@ -241,11 +248,11 @@
     self.stateLabel = stateLabel;
     
     if (SCREEN_HEIGHT <= 667) {
-        stateLabel.frame = CGRectMake(0, 0.8 *SCREEN_WIDTH + 65 + 40 , SCREEN_WIDTH, 15);
-        self.editBt.frame = CGRectMake((SCREEN_WIDTH - 40)/2, 0.8 *SCREEN_WIDTH + 55, 40, 40);
+        stateLabel.frame = CGRectMake(0, 0.8 *SCREEN_WIDTH + 65 , SCREEN_WIDTH, 15);
+//        self.editBt.frame = CGRectMake((SCREEN_WIDTH - 40)/2, 0.8 *SCREEN_WIDTH + 55, 40, 40);
     }else {
-        stateLabel.frame = CGRectMake(0, 0.8 *SCREEN_WIDTH + 100 + 40 , SCREEN_WIDTH, 15);
-        self.editBt.frame = CGRectMake((SCREEN_WIDTH - 40)/2, 0.8 *SCREEN_WIDTH + 90, 40, 40);
+        stateLabel.frame = CGRectMake(0, 0.8 *SCREEN_WIDTH + 100  , SCREEN_WIDTH, 15);
+//        self.editBt.frame = CGRectMake((SCREEN_WIDTH - 40)/2, 0.8 *SCREEN_WIDTH + 90, 40, 40);
     }
     
     

@@ -461,8 +461,6 @@
             }
 
     }];
-    
-    //发现特征的回调
     //发现特征的回调
     [baby setBlockOnDiscoverCharacteristics:^(CBPeripheral *peripheral, CBService *service, NSError *error) {
         if ((service.UUID.UUIDString.length == 4 && [[service.UUID.UUIDString substringWithRange:NSMakeRange(2, 2)].lowercaseString isEqualToString:@"e0"]) || (service.UUID.UUIDString.length >= 8 && [[service.UUID.UUIDString substringWithRange:NSMakeRange(6, 2)].lowercaseString isEqualToString:@"e0"])){
@@ -527,6 +525,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 {
     return self.peripherals.count;
+//    return 3;
 //    return 1;
 }
 
@@ -549,7 +548,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    return 60;
+    return 78 * (SCREEN_WIDTH - 20)/612.0 + 10;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;

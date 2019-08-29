@@ -50,6 +50,8 @@
     [[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
     [self.tabBar setClipsToBounds:YES];
 
+    
+    
     [self setUpUI];
     
     self.selectedIndex = 1;
@@ -77,7 +79,7 @@
     //tabbar
     CGFloat tabbarHeight = 60;
     self.tabbarView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - tabbarHeight, SCREEN_WIDTH, tabbarHeight)];
-    self.tabbarView.backgroundColor = COLOR_RGB(35, 35, 37);
+    self.tabbarView.backgroundColor = COLOR_RGB(41, 42, 43);
     [self.view addSubview:self.tabbarView];
     
     
@@ -162,6 +164,7 @@
     
     self.viewControllers = @[storeNC,deviceNC,settingNC];
     
+   
     
 }
 

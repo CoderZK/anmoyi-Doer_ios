@@ -44,6 +44,7 @@
 		06FE52181FE78E5700CFC17B /* BabyRhythm.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE520D1FE78E5600CFC17B /* BabyRhythm.m */; };
 		06FE52191FE78E5700CFC17B /* BabySpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE520F1FE78E5600CFC17B /* BabySpeaker.m */; };
 		06FE521A1FE78E5700CFC17B /* BabyToy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE52111FE78E5600CFC17B /* BabyToy.m */; };
+		5833BBD423161C8400B708EA /* UIView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5833BBD223161C8300B708EA /* UIView+BSExtension.m */; };
 		D4704E08203952A900F18250 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4704E07203952A900F18250 /* SettingViewController.xib */; };
 		D4704E0C2039567600F18250 /* FunctionDescC.m in Sources */ = {isa = PBXBuildFile; fileRef = D4704E0A2039567600F18250 /* FunctionDescC.m */; };
 		D4704E0D2039567600F18250 /* FunctionDescC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4704E0B2039567600F18250 /* FunctionDescC.xib */; };
@@ -144,6 +145,8 @@
 		06FE520F1FE78E5600CFC17B /* BabySpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabySpeaker.m; sourceTree = "<group>"; };
 		06FE52101FE78E5600CFC17B /* BabyToy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyToy.h; sourceTree = "<group>"; };
 		06FE52111FE78E5600CFC17B /* BabyToy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyToy.m; sourceTree = "<group>"; };
+		5833BBD223161C8300B708EA /* UIView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSExtension.m"; sourceTree = "<group>"; };
+		5833BBD323161C8400B708EA /* UIView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSExtension.h"; sourceTree = "<group>"; };
 		D4704E07203952A900F18250 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		D4704E092039567600F18250 /* FunctionDescC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionDescC.h; sourceTree = "<group>"; };
 		D4704E0A2039567600F18250 /* FunctionDescC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionDescC.m; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 		0645733D1FE8C586007388F7 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5833BBD323161C8400B708EA /* UIView+BSExtension.h */,
+				5833BBD223161C8300B708EA /* UIView+BSExtension.m */,
 				06395D181FDE84450055BB08 /* DeviceListViewController.h */,
 				06395D131FDE84440055BB08 /* DeviceListViewController.m */,
 				06FE51DE1FE76E7D00CFC17B /* MPPeripheralListViewController.h */,
@@ -561,6 +566,7 @@
 				06FE51F51FE7717800CFC17B /* MPService.m in Sources */,
 				06FE51F21FE7717800CFC17B /* MPCharacteristic.m in Sources */,
 				061F7B891FE38546007D2AE7 /* RKDropdownAlert.m in Sources */,
+				5833BBD423161C8400B708EA /* UIView+BSExtension.m in Sources */,
 				06FE51F01FE7717800CFC17B /* MPBluetoothUtils.m in Sources */,
 				D4704E0C2039567600F18250 /* FunctionDescC.m in Sources */,
 				06395D1E1FDE84460055BB08 /* MainViewController.m in Sources */,
