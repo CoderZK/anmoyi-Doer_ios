@@ -79,6 +79,9 @@
     //tabbar
     CGFloat tabbarHeight = 60;
     self.tabbarView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - tabbarHeight, SCREEN_WIDTH, tabbarHeight)];
+    if ([UIApplication sharedApplication].statusBarFrame.size.height > 20) {
+         self.tabbarView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT - tabbarHeight-34, SCREEN_WIDTH, tabbarHeight)];
+    }
     self.tabbarView.backgroundColor = COLOR_RGB(41, 42, 43);
     [self.view addSubview:self.tabbarView];
     

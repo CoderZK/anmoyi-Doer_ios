@@ -202,9 +202,9 @@
     titleImageView.contentMode = UIViewContentModeScaleAspectFit;
     [titleImageView sizeToFit];
     [self.view addSubview:titleImageView];
-    titleImageView.frame = CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, SCREEN_WIDTH, CGRectGetHeight(titleImageView.frame));
+    titleImageView.frame = CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height + 8, SCREEN_WIDTH, CGRectGetHeight(titleImageView.frame));
     
-    self.titleLB = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleImageView.frame) + 5 , 10 , 18)];
+    self.titleLB = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleImageView.frame) + 13 , 10 , 18)];
     self.titleLB.font =[UIFont systemFontOfSize:14];
     self.titleLB.textColor = [UIColor whiteColor];
     self.titleLB.textAlignment = NSTextAlignmentCenter;
@@ -229,7 +229,7 @@
     CGFloat bWidth = 10;
     CGFloat bottomBtnWidth = (SCREEN_WIDTH - aWidth*4 - bWidth *2)/3;
     
-    self.editBt = [[UIButton alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - self.titleLB.width )/2.0 - 13 , CGRectGetMaxY(titleImageView.frame) + 5   , 20, 20)];
+    self.editBt = [[UIButton alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - self.titleLB.width )/2.0 - 13 , CGRectGetMaxY(titleImageView.frame) + 13 , 20, 20)];
 //    [self.editBt setBackgroundColor:[UIColor redColor]];
 //    [self.editBt setImage:[UIImage imageNamed:@"edit"] forState:UIControlStateNormal];
     [self.editBt setBackgroundImage:[UIImage imageNamed:@"edit"] forState:UIControlStateNormal];
@@ -238,7 +238,7 @@
     
     
     
-    UILabel *stateLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0.8 *SCREEN_WIDTH + 70 + 40 , SCREEN_WIDTH, 15)];
+    UILabel *stateLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0.8 *SCREEN_WIDTH + 70 + 40 + 50 , SCREEN_WIDTH, 15)];
     stateLabel.textAlignment = NSTextAlignmentCenter;
     stateLabel.text = _language==0?@"/     预设状态      /":@"/     Default state      /";
     stateLabel.font = [UIFont systemFontOfSize:14];
@@ -248,21 +248,21 @@
     self.stateLabel = stateLabel;
     
     if (SCREEN_HEIGHT <= 667) {
-        stateLabel.frame = CGRectMake(0, 0.8 *SCREEN_WIDTH + 65 , SCREEN_WIDTH, 15);
+        stateLabel.frame = CGRectMake(0, 0.8 *SCREEN_WIDTH + 65 + 20 , SCREEN_WIDTH, 15);
 //        self.editBt.frame = CGRectMake((SCREEN_WIDTH - 40)/2, 0.8 *SCREEN_WIDTH + 55, 40, 40);
     }else {
-        stateLabel.frame = CGRectMake(0, 0.8 *SCREEN_WIDTH + 100  , SCREEN_WIDTH, 15);
+        stateLabel.frame = CGRectMake(0, 0.8 *SCREEN_WIDTH + 100 + 20 , SCREEN_WIDTH, 15);
 //        self.editBt.frame = CGRectMake((SCREEN_WIDTH - 40)/2, 0.8 *SCREEN_WIDTH + 90, 40, 40);
     }
     
     
-    UIImageView *leftLayLineView = [[UIImageView alloc]initWithFrame:CGRectMake(bottomBtnWidth + aWidth, 3, 5, 9)];
-    leftLayLineView.image = [UIImage imageNamed:@"layline"];
-    [stateLabel addSubview:leftLayLineView];
-    
-    UIImageView *rightLayLineView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - bottomBtnWidth - aWidth, 3, 5, 9)];
-    rightLayLineView.image = [UIImage imageNamed:@"layline"];
-    [stateLabel addSubview:rightLayLineView];
+//    UIImageView *leftLayLineView = [[UIImageView alloc]initWithFrame:CGRectMake(bottomBtnWidth + aWidth, 3, 5, 9)];
+//    leftLayLineView.image = [UIImage imageNamed:@"layline"];
+//    [stateLabel addSubview:leftLayLineView];
+//
+//    UIImageView *rightLayLineView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - bottomBtnWidth - aWidth, 3, 5, 9)];
+//    rightLayLineView.image = [UIImage imageNamed:@"layline"];
+//    [stateLabel addSubview:rightLayLineView];
     
     
     
@@ -316,6 +316,12 @@
     [alertController addAction:[UIAlertAction actionWithTitle:str2 style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         UITextField * userNameTextField = alertController.textFields.firstObject;
         self.titleLB.text = userNameTextField.text;
+        
+        [self.titleLB sizeToFit];
+        self.titleLB.height = 18;
+        self.titleLB.x = (SCREEN_WIDTH - self.titleLB.width)/2.0 + 13 ;
+        self.editBt.x = (SCREEN_WIDTH - self.titleLB.width )/2.0 - 13;
+        
         [[NSUserDefaults standardUserDefaults] setObject:userNameTextField.text forKey:[NSString stringWithFormat:@"%ld%@",(long)self.language,self.prideModel.mac]];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
@@ -563,20 +569,22 @@
         int upI = 2;
         int downI = 5;
         
-        CGFloat left = 18;
+        CGFloat left = 0;
         
         if (SCREEN_WIDTH <= 320.f) {
             left = 0;
         }
         
-        UIButton *up_btn= [[UIButton alloc]initWithFrame:CGRectMake(left, interval+100, 95, 62)];
+        UIButton *up_btn= [[UIButton alloc]initWithFrame:CGRectMake(0, interval+110, 95, 62)];
         up_btn.tag = i;
         [up_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chair%d",upI]] forState:UIControlStateNormal];
+        [up_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chair0-%d",i]] forState:UIControlStateHighlighted];
         [self.view addSubview:up_btn];
         
-        UIButton *down_btn= [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - 95 - left, interval+100, 95, 62)];
+        UIButton *down_btn= [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - 95 - left, interval+110, 95, 62)];
         down_btn.tag = i+10;
         [down_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chair%d",downI]] forState:UIControlStateNormal];
+        [down_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chair0-%d",i+3]]  forState:UIControlStateHighlighted];
         [self.view addSubview:down_btn];
         
         [up_btn addTarget:self action:@selector(chair_1_stick_BtnAction:forEvent:) forControlEvents:UIControlEventAllTouchEvents];
@@ -584,7 +592,8 @@
         
     }
     
-    UIImageView *chairImageView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2.f-70, 0.5 * SCREEN_WIDTH * 0.2 + 100, 140, 162)];
+//    UIImageView *chairImageView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2.f-100, 0.5 * SCREEN_WIDTH * 0.2 + 100, 200, 180)];
+    UIImageView *chairImageView = [[UIImageView alloc]initWithFrame:CGRectMake(80,  120, SCREEN_WIDTH - 160 , SCREEN_WIDTH - 160)];
     chairImageView.image = [UIImage imageNamed:@"subchair"];
     [self.view addSubview:chairImageView];
 }
@@ -600,20 +609,22 @@
         }
         int downI = upI + 3;
         
-        CGFloat left = 18;
+        CGFloat left = 0;
         
         if (SCREEN_WIDTH <= 320.f) {
             left = 0;
         }
         
-        UIButton *up_btn= [[UIButton alloc]initWithFrame:CGRectMake(left, i*interval+100, 95, 62)];
+        UIButton *up_btn= [[UIButton alloc]initWithFrame:CGRectMake(left, i*interval+110, 95, 62)];
         up_btn.tag = i;
         [up_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chair%d",upI]] forState:UIControlStateNormal];
+        [up_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chair0-%d",i]] forState:UIControlStateHighlighted];
         [self.view addSubview:up_btn];
         
-        UIButton *down_btn= [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - left - 95, i*interval+100, 95, 62)];
+        UIButton *down_btn= [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - left - 95, i*interval+110, 95, 62)];
         down_btn.tag = i+10;
         [down_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chair%d",downI]] forState:UIControlStateNormal];
+        [down_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chair0-%d",i+3]]  forState:UIControlStateHighlighted];
         [self.view addSubview:down_btn];
         
         [up_btn addTarget:self action:@selector(chair_2_stick_BtnAction:forEvent:) forControlEvents:UIControlEventAllTouchEvents];
@@ -621,7 +632,10 @@
         
     }
     
-    UIImageView *chairImageView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2.f-70, 0.5 * SCREEN_WIDTH * 0.2 + 100, 140, 162)];
+//    UIImageView *chairImageView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2.f-100, 0.5 * SCREEN_WIDTH * 0.2 + 100, 200, 180)];
+    
+    UIImageView *chairImageView = [[UIImageView alloc]initWithFrame:CGRectMake(80, 120, SCREEN_WIDTH - 160 , SCREEN_WIDTH - 160)];
+    
     chairImageView.image = [UIImage imageNamed:@"subchair"];
     [self.view addSubview:chairImageView];
     
@@ -631,7 +645,7 @@
 -(void)setUpChair_3_stick{
     CGFloat interval = SCREEN_HEIGHT / 7;
     
-    CGFloat left = 18;
+    CGFloat left = 0;
     
     if (SCREEN_WIDTH <= 320.f) {
         left = 0;
@@ -639,14 +653,16 @@
     
     for (int i = 0 ; i<3; i++) {
         NSLog(@"%d",i);
-        UIButton *up_btn= [[UIButton alloc]initWithFrame:CGRectMake(left, i*interval+100, 95, 62)];
+        UIButton *up_btn= [[UIButton alloc]initWithFrame:CGRectMake(left, i*interval+110, 95, 62)];
         up_btn.tag = i;
         [up_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chair%d",i]] forState:UIControlStateNormal];
+        [up_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chair0-%d",i]] forState:UIControlStateHighlighted];
         [self.view addSubview:up_btn];
         
-        UIButton *down_btn= [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - left - 95 , i*interval+100, 95, 62)];
+        UIButton *down_btn= [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_WIDTH - left - 95 , i*interval+110, 95, 62)];
         down_btn.tag = i+3;
         [down_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chair%d",i+3]] forState:UIControlStateNormal];
+        [down_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"chair0-%d",i+3]]  forState:UIControlStateHighlighted];
         [self.view addSubview:down_btn];
         
         /*
@@ -681,7 +697,8 @@
         
     }
     
-    UIImageView *chairImageView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2.f-70, 0.5 * SCREEN_WIDTH * 0.2 + 100, 140, 162)];
+//    UIImageView *chairImageView = [[UIImageView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH/2.f-100, 0.5 * SCREEN_WIDTH * 0.2 + 100, 200, 180)];
+    UIImageView *chairImageView = [[UIImageView alloc]initWithFrame:CGRectMake(80, 120, SCREEN_WIDTH - 160 , SCREEN_WIDTH - 160)];
     chairImageView.image = [UIImage imageNamed:@"subchair"];
     [self.view addSubview:chairImageView];
     
@@ -695,7 +712,7 @@
     
     
     
-    CGFloat left = 18;
+    CGFloat left = 0;
     
     CGFloat space = (SCREEN_WIDTH - 2 * left - 3 * 91) /2;
     
@@ -815,7 +832,7 @@
          */
     }
     
-    UIImageView *bedImageView = [[UIImageView alloc]initWithFrame:CGRectMake(20 + SCREEN_WIDTH *0.1, 0.5 * SCREEN_WIDTH * 0.2 + 130, 0.8 *SCREEN_WIDTH - 40,  102)];
+    UIImageView *bedImageView = [[UIImageView alloc]initWithFrame:CGRectMake(10 + SCREEN_WIDTH *0.1, 0.5 * SCREEN_WIDTH * 0.2 + 130, 0.8 *SCREEN_WIDTH - 20,  102)];
     bedImageView.image = [UIImage imageNamed:@"bed"];
     [self.view addSubview:bedImageView];
     

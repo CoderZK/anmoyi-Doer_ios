@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,7 +49,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3me-Yv-H87">
-                    <rect key="frame" x="24" y="35" width="9" height="22"/>
+                    <rect key="frame" x="10" y="30" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="06k-v3-dNM"/>
+                        <constraint firstAttribute="width" constant="35" id="wpY-ff-p74"/>
+                    </constraints>
                     <state key="normal" image="navi_back"/>
                     <connections>
                         <action selector="ibaBack:" destination="-1" eventType="touchUpInside" id="Stm-FT-LCs"/>
@@ -62,20 +66,20 @@
                 <constraint firstItem="UQX-Pm-R1o" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DFl-pR-ptV"/>
                 <constraint firstItem="LXk-jE-48X" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="EnG-h6-0Tt"/>
                 <constraint firstItem="Mzt-Db-oJe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GDm-JQ-7PF"/>
-                <constraint firstItem="3me-Yv-H87" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="15" id="Gx9-9K-RPG"/>
+                <constraint firstItem="3me-Yv-H87" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="Gx9-9K-RPG"/>
                 <constraint firstItem="kKq-Wj-ppa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IXZ-dz-e5A"/>
                 <constraint firstItem="LXk-jE-48X" firstAttribute="top" secondItem="Mzt-Db-oJe" secondAttribute="bottom" constant="45" id="JpH-TW-QD4"/>
-                <constraint firstItem="3me-Yv-H87" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="aEs-6K-KbF"/>
+                <constraint firstItem="3me-Yv-H87" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="aEs-6K-KbF"/>
                 <constraint firstItem="Mzt-Db-oJe" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="15" id="atx-Ss-PQh"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="UQX-Pm-R1o" secondAttribute="bottom" constant="80" id="tdg-Dl-DfT"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="35.5" y="54.5"/>
+            <point key="canvasLocation" x="122" y="27"/>
         </view>
     </objects>
     <resources>
-        <image name="logo_top" width="171" height="38"/>
-        <image name="main_bg" width="360" height="640"/>
+        <image name="logo_top" width="171" height="38.5"/>
+        <image name="main_bg" width="1080" height="1920"/>
         <image name="navi_back" width="9" height="13"/>
     </resources>
 </document>

@@ -94,6 +94,8 @@
     
     [self setUpService];
 
+//    self.selectedChairImageView.image = [UIImage imageNamed:@"bedbed1"];
+
 }
 
 
@@ -431,7 +433,7 @@
             
             if([_prideP.name isEqualToString:@"doer-04"])
             {
-                weakSelf.selectedChairImageView.image = [UIImage imageNamed:@"bed"];
+                weakSelf.selectedChairImageView.image = [UIImage imageNamed:@"bedbed1"];
                 
             }else{
                 
@@ -580,7 +582,7 @@
         PridePeripheral *_prideP = [self.peripherals objectAtIndex:indexPath.row];
         if([_prideP.name isEqualToString:@"doer-04"])
         {
-            self.selectedChairImageView.image = [UIImage imageNamed:@"bed"];
+            self.selectedChairImageView.image = [UIImage imageNamed:@"bedbed1"];
             
         }else{
             
