@@ -62,6 +62,12 @@
     self = [super init];
     if (self) {
         self.peripheral = peripheral;
+        
+        NSUUID * uuid = peripheral.identifier;
+        NSString * mac = [uuid UUIDString];
+        
+        [zkSignleTool shareTool].macKey = mac;
+        
         self.characteristic = characteristic;
         isLightUp = NO;
     }
@@ -80,6 +86,16 @@
         _clockShowView = [[ClcokShowView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     }
     return _clockShowView;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wakeUp:) name:@"wakeUp" object:nil];;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidLoad {
@@ -138,23 +154,23 @@
 }
 
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(bactToMain) name:@"gotoBackground" object:nil];
-    
-}
-
-
+//-(void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:animated];
+//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(bactToMain) name:@"gotoBackground" object:nil];
+//    
+//}
+//
+//
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     [[BabyBluetooth shareBabyBluetooth]cancelAllPeripheralsConnection];    
 }
 
 
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [[BabyBluetooth shareBabyBluetooth] AutoReconnectCancel:self.peripheral];
-}
+//-(void)viewWillDisappear:(BOOL)animated{
+//    [super viewWillDisappear:animated];
+//    [[BabyBluetooth shareBabyBluetooth] AutoReconnectCancel:self.peripheral];
+//}
 //
 //
 //-(void)viewWillDisappear:(BOOL)animated{
@@ -333,8 +349,16 @@
 - (void)clockShow:(UIButton *)button {
     
     
+//    [[UIApplication sharedApplication].keyWindow addSubview:self.clockView];
+    
     [self.clockView show];
-    self.clockView.model = [[zkSignleTool shareTool] getDataModelWithKey:@"123456"];
+    
+    clcokModel * model = nil;
+       
+       if ([zkSignleTool shareTool].macKey !=nil) {
+           model =  [[zkSignleTool shareTool] getDataModelWithKey:[zkSignleTool shareTool].macKey];
+       }
+    self.clockView.model = model;
     
 //    [self.clockShowView show];
     
@@ -1212,6 +1236,14 @@
         }
             break;
     }
+    
+}
+
+- (void)wakeUp:(NSNotification *)no  {
+    [self sendData:(BlueToothOrderType_Wake_UP)];
+    
+    
+    NSLog(@"%@",@"发送蓝牙事件");
     
 }
 

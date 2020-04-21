@@ -20,6 +20,15 @@ static zkSignleTool * tool = nil;
     return tool;
 }
 
+- (void)setMacKey:(NSString *)macKey {
+    [[NSUserDefaults  standardUserDefaults] setValue:macKey forKeyPath:@"macKey"];
+    [[NSUserDefaults  standardUserDefaults] synchronize];
+}
+
+
+- (NSString *)macKey {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:@"macKey"];
+}
 
 //- (void)setUserModel:(QYZJUserModel *)userModel {
 //    if (userModel) {
@@ -83,6 +92,10 @@ static zkSignleTool * tool = nil;
     NSInteger minute =  [dateComponent minute];
     NSInteger second = [dateComponent second];
     NSString * str = [NSString stringWithFormat:@"%d:%d:%d",hour,minute,second];
+    
+    NSLog(@"=======\n---%d   && %@ &&%@",second,model.time,str);
+    
+    
     
     if (![model.time isEqualToString:str]) {
         return NO;

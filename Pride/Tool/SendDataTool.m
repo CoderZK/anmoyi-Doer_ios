@@ -123,8 +123,13 @@
         case BlueToothOrderType_Massage_Gear_0:
         {
             word = 0xAA;byte = 0x04;
+             break;
         }
-            break;
+        case BlueToothOrderType_Wake_UP:{
+            word = 0xAD;byte = 0x01;
+             break;
+        }
+           
             //        case BlueToothOrderType_Massage2_Gear_1:
             //        {
             //            word = 0xAB;byte = 0x01;

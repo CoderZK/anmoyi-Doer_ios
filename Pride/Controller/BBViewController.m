@@ -13,6 +13,7 @@
 #import "MBProgressHUD.h"
 #import "PridePeripheral.h"
 #import <AVFoundation/AVFoundation.h>
+#import "zkSignleTool.h"
 
 @interface BBViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -452,7 +453,14 @@
         [weakBaby cancelScan];
         [weakSelf.progressHUD hideAnimated:YES];
         NSLog(@"设备：%@--连接成功",peripheral.name);
-            
+           
+        
+        NSUUID * uuid = peripheral.identifier;
+        NSString * mac = [uuid UUIDString];
+        
+
+        
+        
 
     }];
 

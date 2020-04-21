@@ -135,7 +135,7 @@
         self.timeLB.textAlignment = NSTextAlignmentRight;
         self.timeLB.font = [UIFont systemFontOfSize:13];
         [self.blackV addSubview:self.timeLB];
-        self.timeLB.text = @"周一";
+        self.timeLB.text = @"永不 >";
         
         self.chooseBt = [[UIButton alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(self.datePicker.frame) + 10+ 5, self.blackV.width - 20, 40)];
         [self.blackV addSubview:self.chooseBt];
@@ -197,22 +197,18 @@
 
 - (void)setModel:(clcokModel *)model {
     _model = model;
-    
-    [self setTimeWithArr:model.timeArr];
     if (model == nil) {
         [self.datePicker setDate:[NSDate date]];
+        self.timeLB.text = @"永不 >";
     }else {
         if (self.model.date != nil) {
             [self.datePicker setDate:model.date];
+            self.dataArray = model.timeArr;
         }
+        
        
     }
-    
-    
-    
-    
-    
-    
+
 }
 
 
@@ -247,25 +243,18 @@
     NSInteger second = [dateComponent second];
     
     clcokModel * model = [[clcokModel alloc] init];
-    model.time = [NSString stringWithFormat:@"%d:%d:%d",hour,minute,second];
+    model.time = [NSString stringWithFormat:@"%d:%d:%d",hour,minute,0];
     model.timeArr = self.dataArray;
     model.isOpen = self.switchBt.on;
     model.date = self.datePicker.date;
-    if (self.keyStr.length > 0) {
-       [[zkSignleTool shareTool] setDataModel:model withKey:self.keyStr];
-        
+    if ([zkSignleTool shareTool].macKey != nil ) {
+       [[zkSignleTool shareTool] setDataModel:model withKey:[zkSignleTool shareTool].macKey];
         [self diss];
-        
     }else {
-        
-
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"设备断开无法添加闹钟" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction * action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:nil];
         [alertController addAction:action];
         [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
-        
-         [[zkSignleTool shareTool] setDataModel:model withKey:@"123456"];
-        
         [self diss];
         
     }
@@ -349,7 +338,7 @@
 
 - (void)show {
     
-    [[UIApplication sharedApplication].keyWindow.rootViewController.view addSubview:self];
+    [[UIApplication sharedApplication].keyWindow addSubview:self];
     [UIView animateWithDuration:0.2 animations:^{
         self.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.4];
     }];

@@ -17,8 +17,9 @@
 @interface AppDelegate ()
 
 @property(nonatomic,assign)NSInteger number;
-@property(nonatomic,strong)NSTimer *tiemer,*timerOne;
+@property(nonatomic,strong)NSTimer *tiemer,*timerOne,*TTTT;
 @property(nonatomic,strong)ClcokShowView *clockShowView;
+ @property (nonatomic, assign) UIBackgroundTaskIdentifier bgTask;
 @end
 
 @implementation AppDelegate
@@ -98,7 +99,7 @@
     NSInteger hour =  [dateComponent hour];
     NSInteger minute =  [dateComponent minute];
     NSInteger second = [dateComponent second];
-    NSString *tiemStr = [NSString stringWithFormat:@"%02d:%02d:%02d",hour,minute,second];
+    NSString *tiemStr = [NSString stringWithFormat:@"%02d:%02d:%02d",hour,minute,self.number];
     self.clockShowView.timeStr = tiemStr;
     
     
@@ -109,9 +110,13 @@
 -(void)printCurrentTime:(id)sender{
 //    NSLog(@"当前的时间是---%@---",[self getCurrentTime]);
     
-    clcokModel * model = [[zkSignleTool shareTool] getDataModelWithKey:@"123456"];
+    clcokModel * model = nil;
     
- 
+    if ([zkSignleTool shareTool].macKey !=nil) {
+        model =  [[zkSignleTool shareTool] getDataModelWithKey:[zkSignleTool shareTool].macKey];
+    }
+    
+    NSLog(@"==\n%d--%@---%@",model.isOpen,model.time,model.timeArr);
 
     
     if (self.number >=30) {
@@ -123,17 +128,20 @@
         NSURL *url=[[NSURL alloc]initFileURLWithPath:musicPath];
         self.avPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
         [self.avPlayer play];
-        self.number = 0;
-        self.isClocking = NO;
-           
+       
         [self.tiemer invalidate];
         self.tiemer = nil;
         
+        [self.clockShowView diss];
         if (self.number == 30) {
             //发送蓝牙事件
-            [self.clockShowView diss];
+            NSLog(@"%@",@"触发蓝牙事件");
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"wakeUp" object:nil];
         }
-
+        self.isClocking = NO;
+        self.number = 0;
+        
     }else {
         
         if (model != nil && [[zkSignleTool shareTool] isOkWithModel:model] ) {
@@ -215,12 +223,40 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    [[BabyBluetooth shareBabyBluetooth] cancelAllPeripheralsConnection];
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"gotoBackground" object:nil];
+//    [[BabyBluetooth shareBabyBluetooth] cancelAllPeripheralsConnection];
+//    [[NSNotificationCenter defaultCenter]postNotificationName:@"gotoBackground" object:nil];
+    
+    [ self comeToBackgroundMode];
+    
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
+
+
+
+-(void)comeToBackgroundMode{
+    //初始化一个后台任务BackgroundTask，这个后台任务的作用就是告诉系统当前app在后台有任务处理，需要时间
+    UIApplication*  app = [UIApplication sharedApplication];
+    self.bgTask = [app beginBackgroundTaskWithExpirationHandler:^{
+    [app endBackgroundTask:self.bgTask];
+    self.bgTask = UIBackgroundTaskInvalid;
+    }];
+    //开启定时器 不断向系统请求后台任务执行的时间
+    self.TTTT = [NSTimer scheduledTimerWithTimeInterval:25.0 target:self selector:@selector(applyForMoreTime) userInfo:nil repeats:YES];
+    [self.TTTT fire];
+}
+
+-(void)applyForMoreTime {
+   //如果系统给的剩余时间小于60秒 就终止当前的后台任务，再重新初始化一个后台任务，重新让系统分配时间，这样一直循环下去，保持APP在后台一直处于active状态。
+    if ([UIApplication sharedApplication].backgroundTimeRemaining < 60) {
+    [[UIApplication sharedApplication] endBackgroundTask:self.bgTask];
+    self.bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        [[UIApplication sharedApplication] endBackgroundTask:self.bgTask];
+        self.bgTask = UIBackgroundTaskInvalid;
+    }];
+    }
+}
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     [[NSNotificationCenter defaultCenter]postNotificationName:@"backToMain" object:nil];

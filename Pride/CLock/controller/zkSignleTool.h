@@ -19,6 +19,8 @@
 - (BOOL)isOkWithModel:(clcokModel *)model;
 
 - (NSInteger)getWeekDayFordate;
+/**  */
+@property(nonatomic , strong)NSString *macKey;
 
 @end
 

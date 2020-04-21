@@ -998,17 +998,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = N6ZU25A67U;
+				DEVELOPMENT_TEAM = 4744VSH78G;
 				INFOPLIST_FILE = Pride/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ffyy.CNDOER.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.ffyy.CNDOER.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4738ee22-c4c1-40b2-9273-486f090fb31c";
-				PROVISIONING_PROFILE_SPECIFIER = xuxuecom;
+				PROVISIONING_PROFILE_SPECIFIER = com.XXX;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;

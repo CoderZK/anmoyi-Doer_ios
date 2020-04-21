@@ -34,7 +34,8 @@ typedef NS_ENUM(NSInteger, BlueToothOrderType) {
     BlueToothOrderType_Massage_Gear_2,
     BlueToothOrderType_Massage_Gear_3,
     BlueToothOrderType_Light_On,
-    BlueToothOrderType_Light_Off
+    BlueToothOrderType_Light_Off,
+    BlueToothOrderType_Wake_UP
 };
 
 +(void)sendData:(BlueToothOrderType)orderType complention:(void (^)(NSData * data))complentioner;

@@ -25,13 +25,13 @@
         
         
         
-        UIButton * clossBt =[[UIButton alloc] initWithFrame:self.bounds];
-        [self addSubview:clossBt];
-        [clossBt addTarget:self action:@selector(diss) forControlEvents:UIControlEventTouchUpInside];
+//        UIButton * clossBt =[[UIButton alloc] initWithFrame:self.bounds];
+//        [self addSubview:clossBt];
+//        [clossBt addTarget:self action:@selector(diss) forControlEvents:UIControlEventTouchUpInside];
         
         
         self.backgroundColor =[UIColor colorWithWhite:0 alpha:0.1];
-        self.blackV = [[UIView alloc] initWithFrame:CGRectMake(30,(SCREEN_HEIGHT - 410)/2, SCREEN_WIDTH-60, 410)];
+        self.blackV = [[UIView alloc] initWithFrame:CGRectMake(30,(SCREEN_HEIGHT - 360)/2, SCREEN_WIDTH-60, 360)];
         self.blackV.backgroundColor = [UIColor blackColor];
         self.blackV.layer.cornerRadius = 5;
         self.blackV.clipsToBounds = YES;
@@ -41,7 +41,7 @@
         view.backgroundColor = [UIColor colorWithRed:147/255.0 green:91/255.0 blue:24/255.0 alpha:1.0];
         [self.blackV addSubview:view];
         
-        self.timeLB = [[UILabel alloc] initWithFrame:CGRectMake(10, 100 , self.blackV.width - 20, 30)];
+        self.timeLB = [[UILabel alloc] initWithFrame:CGRectMake(10, 50 , self.blackV.width - 20, 30)];
         self.timeLB.textColor = [UIColor whiteColor];
         self.timeLB.textAlignment = NSTextAlignmentCenter;
         self.timeLB.font = [UIFont systemFontOfSize:20];
@@ -117,7 +117,7 @@
 
 - (void)show {
     
-    [[UIApplication sharedApplication].keyWindow.rootViewController.view addSubview:self];
+    [[UIApplication sharedApplication].keyWindow addSubview:self];
     [UIView animateWithDuration:0.2 animations:^{
         self.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.4];
     }];
