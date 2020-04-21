@@ -73,8 +73,7 @@
        self.isClocking = NO;
        self.number = 0;
       self.timerOne =  [NSTimer scheduledTimerWithTimeInterval:1.f target:self selector:@selector(printCurrentTime:) userInfo:nil repeats:YES];
-       [[NSRunLoop currentRunLoop] addTimer:_timerOne  forMode:NSRunLoopCommonModes];
-
+       [[NSRunLoop currentRunLoop] addTimer:_timerOne  forMode:NSRunLoopCommonModes];    
     return YES;
 }
 
@@ -104,7 +103,7 @@
     
     
 
-    
+
 }
 
 -(void)printCurrentTime:(id)sender{
@@ -112,7 +111,7 @@
     
     clcokModel * model = nil;
     
-    if ([zkSignleTool shareTool].macKey !=nil) {
+    if ([zkSignleTool shareTool].macKey.length > 0) {
         model =  [[zkSignleTool shareTool] getDataModelWithKey:[zkSignleTool shareTool].macKey];
     }
     

@@ -74,12 +74,12 @@
     return self;
 }
 
-- (AddClockView *)clockView {
-    if (_clockView == nil) {
-        _clockView = [[AddClockView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    }
-    return _clockView;
-}
+//- (AddClockView *)clockView {
+//    if (_clockView == nil) {
+//        _clockView = [[AddClockView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+//    }
+//    return _clockView;
+//}
 
 - (ClcokShowView *)clockShowView {
     if (_clockShowView == nil) {
@@ -284,10 +284,16 @@
     self.stateLabel = stateLabel;
     
      UIButton * button = [[UIButton alloc] init];
-     button.backgroundColor = [UIColor redColor];
+//     button.backgroundColor = [UIColor redColor];
     [self.view addSubview:button];
     self.clockBt = button;
     [button addTarget:self action:@selector(clockShow:) forControlEvents:UIControlEventTouchUpInside];
+    
+    if ([zkSignleTool shareTool].macKey.length > 0 && [[zkSignleTool shareTool] getDataModelWithKey:[zkSignleTool shareTool].macKey] != nil &&  [[zkSignleTool shareTool] getDataModelWithKey:[zkSignleTool shareTool].macKey].isOpen &&  [[zkSignleTool shareTool] getDataModelWithKey:[zkSignleTool shareTool].macKey].timeArr.count > 0) {
+        [self.clockBt setBackgroundImage:[UIImage imageNamed:@"clock1"] forState:UIControlStateNormal];
+    }else {
+        [self.clockBt setBackgroundImage:[UIImage imageNamed:@"clock2"] forState:UIControlStateNormal];
+    }
     
     if (SCREEN_HEIGHT <= 667) {
         stateLabel.frame = CGRectMake(0, 0.8 *SCREEN_WIDTH + 65 + 20 , SCREEN_WIDTH, 15);
@@ -351,14 +357,25 @@
     
 //    [[UIApplication sharedApplication].keyWindow addSubview:self.clockView];
     
+    self.clockView = [[AddClockView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    
     [self.clockView show];
     
     clcokModel * model = nil;
-       
-       if ([zkSignleTool shareTool].macKey !=nil) {
+      NSLog(@"----%@",[zkSignleTool shareTool].macKey);
+    if ([zkSignleTool shareTool].macKey.length > 0) {
            model =  [[zkSignleTool shareTool] getDataModelWithKey:[zkSignleTool shareTool].macKey];
        }
     self.clockView.model = model;
+    __weak typeof(self) weakSelf = self;
+    self.clockView.clickConfirmBlock = ^(clcokModel * _Nonnull model) {
+        if (model.isOpen && model.timeArr.count > 0) {
+           [weakSelf.clockBt setBackgroundImage:[UIImage imageNamed:@"clock1"] forState:UIControlStateNormal];
+        }else {
+           [weakSelf.clockBt setBackgroundImage:[UIImage imageNamed:@"clock2"] forState:UIControlStateNormal];
+        }
+        
+    };
     
 //    [self.clockShowView show];
     

@@ -21,13 +21,20 @@ static zkSignleTool * tool = nil;
 }
 
 - (void)setMacKey:(NSString *)macKey {
-    [[NSUserDefaults  standardUserDefaults] setValue:macKey forKeyPath:@"macKey"];
+    [[NSUserDefaults  standardUserDefaults] setObject:macKey forKey:@"macKey"];
     [[NSUserDefaults  standardUserDefaults] synchronize];
 }
 
 
 - (NSString *)macKey {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:@"macKey"];
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"macKey"] == nil ) {
+        return @"";
+    }else {
+        return [[NSUserDefaults standardUserDefaults] objectForKey:@"macKey"];
+    }
+    
+  
 }
 
 //- (void)setUserModel:(QYZJUserModel *)userModel {

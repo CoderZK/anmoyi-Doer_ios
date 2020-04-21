@@ -22,6 +22,8 @@
 /**  */
 @property(nonatomic , strong)NSString *macKey;
 
+@property(nonatomic,strong)NSString *nick_name;
+
 @end
 
 

@@ -247,9 +247,18 @@
     model.timeArr = self.dataArray;
     model.isOpen = self.switchBt.on;
     model.date = self.datePicker.date;
-    if ([zkSignleTool shareTool].macKey != nil ) {
+    
+    NSLog(@"===%d",[zkSignleTool shareTool].macKey != nil);
+    NSLog(@"----===%@",[zkSignleTool shareTool].macKey);
+    if ([zkSignleTool shareTool].macKey.length > 0) {
        [[zkSignleTool shareTool] setDataModel:model withKey:[zkSignleTool shareTool].macKey];
+       
+        
+        if (self.clickConfirmBlock != nil) {
+            self.clickConfirmBlock(model);
+        }
         [self diss];
+        
     }else {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"设备断开无法添加闹钟" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction * action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:nil];
@@ -259,6 +268,7 @@
         
     }
     
+
     
      NSLog(@"%@",@"123");
 }
