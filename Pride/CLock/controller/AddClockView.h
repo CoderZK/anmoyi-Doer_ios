@@ -11,6 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AddClockView : UIView
+- (void)show;
+- (void)diss;
+
 
 @end
 
