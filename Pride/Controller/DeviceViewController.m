@@ -36,6 +36,7 @@
 
 
 @property(nonatomic,strong)UIButton *editBt;//编辑按钮
+@property(nonatomic , strong)UIButton *clockBt;
 @property(nonatomic,strong)UILabel *titleLB;//编辑后的名字
 @end
 
@@ -237,6 +238,8 @@
     [self.view addSubview:self.editBt];
     
     
+   
+    
     
     UILabel *stateLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0.8 *SCREEN_WIDTH + 70 + 40 + 50 , SCREEN_WIDTH, 15)];
     stateLabel.textAlignment = NSTextAlignmentCenter;
@@ -247,12 +250,17 @@
     [self.view addSubview:stateLabel];
     self.stateLabel = stateLabel;
     
+     UIButton * button = [[UIButton alloc] init];
+     button.backgroundColor = [UIColor redColor];
+    [self.view addSubview:button];
+    self.clockBt = button;
+    
     if (SCREEN_HEIGHT <= 667) {
         stateLabel.frame = CGRectMake(0, 0.8 *SCREEN_WIDTH + 65 + 20 , SCREEN_WIDTH, 15);
-//        self.editBt.frame = CGRectMake((SCREEN_WIDTH - 40)/2, 0.8 *SCREEN_WIDTH + 55, 40, 40);
+        button.frame = CGRectMake((SCREEN_WIDTH - 40)/2, 0.8 *SCREEN_WIDTH + 55-30, 40, 40);
     }else {
         stateLabel.frame = CGRectMake(0, 0.8 *SCREEN_WIDTH + 100 + 20 , SCREEN_WIDTH, 15);
-//        self.editBt.frame = CGRectMake((SCREEN_WIDTH - 40)/2, 0.8 *SCREEN_WIDTH + 90, 40, 40);
+        button.frame = CGRectMake((SCREEN_WIDTH - 40)/2, 0.8 *SCREEN_WIDTH + 90-30, 40, 40);
     }
     
     

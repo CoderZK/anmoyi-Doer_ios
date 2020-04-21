@@ -45,6 +45,32 @@
 		06FE52191FE78E5700CFC17B /* BabySpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE520F1FE78E5600CFC17B /* BabySpeaker.m */; };
 		06FE521A1FE78E5700CFC17B /* BabyToy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE52111FE78E5600CFC17B /* BabyToy.m */; };
 		5833BBD423161C8400B708EA /* UIView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5833BBD223161C8300B708EA /* UIView+BSExtension.m */; };
+		666E465D244E925D006E07DF /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E4627244E925D006E07DF /* BaseTableViewController.m */; };
+		666E465E244E925D006E07DF /* UNNotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E462C244E925D006E07DF /* UNNotificationsManager.m */; };
+		666E465F244E925D006E07DF /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E462F244E925D006E07DF /* YYDiskCache.m */; };
+		666E4660244E925D006E07DF /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E4631244E925D006E07DF /* YYCache.m */; };
+		666E4661244E925D006E07DF /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E4635244E925D006E07DF /* YYKVStorage.m */; };
+		666E4662244E925D006E07DF /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E4636244E925D006E07DF /* YYMemoryCache.m */; };
+		666E4663244E925D006E07DF /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E463A244E925D006E07DF /* NSObject+YYModel.m */; };
+		666E4664244E925D006E07DF /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E463B244E925D006E07DF /* YYClassInfo.m */; };
+		666E4665244E925D006E07DF /* UIControl+ORIBProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E463E244E925D006E07DF /* UIControl+ORIBProperty.m */; };
+		666E4666244E925D006E07DF /* UICollectionViewFlowLayout+ORIBProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E4640244E925D006E07DF /* UICollectionViewFlowLayout+ORIBProperty.m */; };
+		666E4667244E925D006E07DF /* UILabel+ORIBProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E4648244E925D006E07DF /* UILabel+ORIBProperty.m */; };
+		666E4668244E925D006E07DF /* UITextField+ORIBProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E464B244E925D006E07DF /* UITextField+ORIBProperty.m */; };
+		666E4669244E925D006E07DF /* UIView+ORIBProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E464D244E925D006E07DF /* UIView+ORIBProperty.m */; };
+		666E466A244E925D006E07DF /* UIImageView+ORIBProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E464E244E925D006E07DF /* UIImageView+ORIBProperty.m */; };
+		666E466B244E925D006E07DF /* NSLayoutConstraint+ORIBProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E464F244E925D006E07DF /* NSLayoutConstraint+ORIBProperty.m */; };
+		666E466C244E925D006E07DF /* UIButton+ORIBProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E4650244E925D006E07DF /* UIButton+ORIBProperty.m */; };
+		666E466D244E925D006E07DF /* NSObject+ORIBProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E4651244E925D006E07DF /* NSObject+ORIBProperty.m */; };
+		666E466E244E925D006E07DF /* UITextView+ORIBProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E4652244E925D006E07DF /* UITextView+ORIBProperty.m */; };
+		666E466F244E925D006E07DF /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E4655244E925D006E07DF /* Aspects.m */; };
+		666E4670244E925D006E07DF /* lightM_04.caf in Resources */ = {isa = PBXBuildFile; fileRef = 666E4657244E925D006E07DF /* lightM_04.caf */; };
+		666E4671244E925D006E07DF /* lightM_02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 666E4658244E925D006E07DF /* lightM_02.caf */; };
+		666E4672244E925D006E07DF /* lightM_03.caf in Resources */ = {isa = PBXBuildFile; fileRef = 666E4659244E925D006E07DF /* lightM_03.caf */; };
+		666E4673244E925D006E07DF /* lightM_01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 666E465A244E925D006E07DF /* lightM_01.caf */; };
+		666E4674244E925D006E07DF /* hotM_02.caf in Resources */ = {isa = PBXBuildFile; fileRef = 666E465B244E925D006E07DF /* hotM_02.caf */; };
+		666E4675244E925D006E07DF /* hotM_01.caf in Resources */ = {isa = PBXBuildFile; fileRef = 666E465C244E925D006E07DF /* hotM_01.caf */; };
+		666E467D244E9431006E07DF /* AddClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E467C244E9431006E07DF /* AddClockView.m */; };
 		D4704E08203952A900F18250 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4704E07203952A900F18250 /* SettingViewController.xib */; };
 		D4704E0C2039567600F18250 /* FunctionDescC.m in Sources */ = {isa = PBXBuildFile; fileRef = D4704E0A2039567600F18250 /* FunctionDescC.m */; };
 		D4704E0D2039567600F18250 /* FunctionDescC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4704E0B2039567600F18250 /* FunctionDescC.xib */; };
@@ -147,6 +173,54 @@
 		06FE52111FE78E5600CFC17B /* BabyToy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyToy.m; sourceTree = "<group>"; };
 		5833BBD223161C8300B708EA /* UIView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSExtension.m"; sourceTree = "<group>"; };
 		5833BBD323161C8400B708EA /* UIView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSExtension.h"; sourceTree = "<group>"; };
+		666E4627244E925D006E07DF /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		666E4628244E925D006E07DF /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		666E462B244E925D006E07DF /* UNNotificationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNNotificationsManager.h; sourceTree = "<group>"; };
+		666E462C244E925D006E07DF /* UNNotificationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UNNotificationsManager.m; sourceTree = "<group>"; };
+		666E462F244E925D006E07DF /* YYDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDiskCache.m; sourceTree = "<group>"; };
+		666E4630244E925D006E07DF /* YYKVStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKVStorage.h; sourceTree = "<group>"; };
+		666E4631244E925D006E07DF /* YYCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCache.m; sourceTree = "<group>"; };
+		666E4632244E925D006E07DF /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
+		666E4633244E925D006E07DF /* YYDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDiskCache.h; sourceTree = "<group>"; };
+		666E4634244E925D006E07DF /* YYCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCache.h; sourceTree = "<group>"; };
+		666E4635244E925D006E07DF /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
+		666E4636244E925D006E07DF /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
+		666E4638244E925D006E07DF /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		666E4639244E925D006E07DF /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		666E463A244E925D006E07DF /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		666E463B244E925D006E07DF /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		666E463C244E925D006E07DF /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		666E463E244E925D006E07DF /* UIControl+ORIBProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ORIBProperty.m"; sourceTree = "<group>"; };
+		666E463F244E925D006E07DF /* UITextField+ORIBProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ORIBProperty.h"; sourceTree = "<group>"; };
+		666E4640244E925D006E07DF /* UICollectionViewFlowLayout+ORIBProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewFlowLayout+ORIBProperty.m"; sourceTree = "<group>"; };
+		666E4641244E925D006E07DF /* UILabel+ORIBProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ORIBProperty.h"; sourceTree = "<group>"; };
+		666E4642244E925D006E07DF /* UIView+ORIBProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ORIBProperty.h"; sourceTree = "<group>"; };
+		666E4643244E925D006E07DF /* UIButton+ORIBProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ORIBProperty.h"; sourceTree = "<group>"; };
+		666E4644244E925D006E07DF /* NSLayoutConstraint+ORIBProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+ORIBProperty.h"; sourceTree = "<group>"; };
+		666E4645244E925D006E07DF /* UIImageView+ORIBProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ORIBProperty.h"; sourceTree = "<group>"; };
+		666E4646244E925D006E07DF /* UITextView+ORIBProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+ORIBProperty.h"; sourceTree = "<group>"; };
+		666E4647244E925D006E07DF /* NSObject+ORIBProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ORIBProperty.h"; sourceTree = "<group>"; };
+		666E4648244E925D006E07DF /* UILabel+ORIBProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ORIBProperty.m"; sourceTree = "<group>"; };
+		666E4649244E925D006E07DF /* UICollectionViewFlowLayout+ORIBProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewFlowLayout+ORIBProperty.h"; sourceTree = "<group>"; };
+		666E464A244E925D006E07DF /* ORIBProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORIBProperty.h; sourceTree = "<group>"; };
+		666E464B244E925D006E07DF /* UITextField+ORIBProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ORIBProperty.m"; sourceTree = "<group>"; };
+		666E464C244E925D006E07DF /* UIControl+ORIBProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+ORIBProperty.h"; sourceTree = "<group>"; };
+		666E464D244E925D006E07DF /* UIView+ORIBProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ORIBProperty.m"; sourceTree = "<group>"; };
+		666E464E244E925D006E07DF /* UIImageView+ORIBProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ORIBProperty.m"; sourceTree = "<group>"; };
+		666E464F244E925D006E07DF /* NSLayoutConstraint+ORIBProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+ORIBProperty.m"; sourceTree = "<group>"; };
+		666E4650244E925D006E07DF /* UIButton+ORIBProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ORIBProperty.m"; sourceTree = "<group>"; };
+		666E4651244E925D006E07DF /* NSObject+ORIBProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ORIBProperty.m"; sourceTree = "<group>"; };
+		666E4652244E925D006E07DF /* UITextView+ORIBProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+ORIBProperty.m"; sourceTree = "<group>"; };
+		666E4654244E925D006E07DF /* Aspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		666E4655244E925D006E07DF /* Aspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		666E4657244E925D006E07DF /* lightM_04.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lightM_04.caf; sourceTree = "<group>"; };
+		666E4658244E925D006E07DF /* lightM_02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lightM_02.caf; sourceTree = "<group>"; };
+		666E4659244E925D006E07DF /* lightM_03.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lightM_03.caf; sourceTree = "<group>"; };
+		666E465A244E925D006E07DF /* lightM_01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lightM_01.caf; sourceTree = "<group>"; };
+		666E465B244E925D006E07DF /* hotM_02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hotM_02.caf; sourceTree = "<group>"; };
+		666E465C244E925D006E07DF /* hotM_01.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hotM_01.caf; sourceTree = "<group>"; };
+		666E467B244E9431006E07DF /* AddClockView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddClockView.h; sourceTree = "<group>"; };
+		666E467C244E9431006E07DF /* AddClockView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddClockView.m; sourceTree = "<group>"; };
 		D4704E07203952A900F18250 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		D4704E092039567600F18250 /* FunctionDescC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionDescC.h; sourceTree = "<group>"; };
 		D4704E0A2039567600F18250 /* FunctionDescC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionDescC.m; sourceTree = "<group>"; };
@@ -242,6 +316,7 @@
 		06395CD31FDE83DF0055BB08 /* Pride */ = {
 			isa = PBXGroup;
 			children = (
+				666E4625244E925D006E07DF /* CLock */,
 				064573391FE8C52A007388F7 /* Controller */,
 				0645733F1FE8C5AA007388F7 /* Store */,
 				0645733E1FE8C59E007388F7 /* Setting */,
@@ -413,6 +488,133 @@
 			path = BabyBluetooth;
 			sourceTree = "<group>";
 		};
+		666E4625244E925D006E07DF /* CLock */ = {
+			isa = PBXGroup;
+			children = (
+				666E4626244E925D006E07DF /* controller */,
+				666E4629244E925D006E07DF /* public */,
+				666E462D244E925D006E07DF /* Lib */,
+				666E4656244E925D006E07DF /* resource */,
+			);
+			path = CLock;
+			sourceTree = "<group>";
+		};
+		666E4626244E925D006E07DF /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				666E4627244E925D006E07DF /* BaseTableViewController.m */,
+				666E4628244E925D006E07DF /* BaseTableViewController.h */,
+				666E467B244E9431006E07DF /* AddClockView.h */,
+				666E467C244E9431006E07DF /* AddClockView.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		666E4629244E925D006E07DF /* public */ = {
+			isa = PBXGroup;
+			children = (
+				666E462A244E925D006E07DF /* UNNotificationsManager */,
+			);
+			path = public;
+			sourceTree = "<group>";
+		};
+		666E462A244E925D006E07DF /* UNNotificationsManager */ = {
+			isa = PBXGroup;
+			children = (
+				666E462B244E925D006E07DF /* UNNotificationsManager.h */,
+				666E462C244E925D006E07DF /* UNNotificationsManager.m */,
+			);
+			path = UNNotificationsManager;
+			sourceTree = "<group>";
+		};
+		666E462D244E925D006E07DF /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				666E462E244E925D006E07DF /* YYCache */,
+				666E4637244E925D006E07DF /* YYModel */,
+				666E463D244E925D006E07DF /* IBProperty */,
+				666E4653244E925D006E07DF /* Aspects */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		666E462E244E925D006E07DF /* YYCache */ = {
+			isa = PBXGroup;
+			children = (
+				666E462F244E925D006E07DF /* YYDiskCache.m */,
+				666E4630244E925D006E07DF /* YYKVStorage.h */,
+				666E4631244E925D006E07DF /* YYCache.m */,
+				666E4632244E925D006E07DF /* YYMemoryCache.h */,
+				666E4633244E925D006E07DF /* YYDiskCache.h */,
+				666E4634244E925D006E07DF /* YYCache.h */,
+				666E4635244E925D006E07DF /* YYKVStorage.m */,
+				666E4636244E925D006E07DF /* YYMemoryCache.m */,
+			);
+			path = YYCache;
+			sourceTree = "<group>";
+		};
+		666E4637244E925D006E07DF /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				666E4638244E925D006E07DF /* YYClassInfo.h */,
+				666E4639244E925D006E07DF /* YYModel.h */,
+				666E463A244E925D006E07DF /* NSObject+YYModel.m */,
+				666E463B244E925D006E07DF /* YYClassInfo.m */,
+				666E463C244E925D006E07DF /* NSObject+YYModel.h */,
+			);
+			path = YYModel;
+			sourceTree = "<group>";
+		};
+		666E463D244E925D006E07DF /* IBProperty */ = {
+			isa = PBXGroup;
+			children = (
+				666E463E244E925D006E07DF /* UIControl+ORIBProperty.m */,
+				666E463F244E925D006E07DF /* UITextField+ORIBProperty.h */,
+				666E4640244E925D006E07DF /* UICollectionViewFlowLayout+ORIBProperty.m */,
+				666E4641244E925D006E07DF /* UILabel+ORIBProperty.h */,
+				666E4642244E925D006E07DF /* UIView+ORIBProperty.h */,
+				666E4643244E925D006E07DF /* UIButton+ORIBProperty.h */,
+				666E4644244E925D006E07DF /* NSLayoutConstraint+ORIBProperty.h */,
+				666E4645244E925D006E07DF /* UIImageView+ORIBProperty.h */,
+				666E4646244E925D006E07DF /* UITextView+ORIBProperty.h */,
+				666E4647244E925D006E07DF /* NSObject+ORIBProperty.h */,
+				666E4648244E925D006E07DF /* UILabel+ORIBProperty.m */,
+				666E4649244E925D006E07DF /* UICollectionViewFlowLayout+ORIBProperty.h */,
+				666E464A244E925D006E07DF /* ORIBProperty.h */,
+				666E464B244E925D006E07DF /* UITextField+ORIBProperty.m */,
+				666E464C244E925D006E07DF /* UIControl+ORIBProperty.h */,
+				666E464D244E925D006E07DF /* UIView+ORIBProperty.m */,
+				666E464E244E925D006E07DF /* UIImageView+ORIBProperty.m */,
+				666E464F244E925D006E07DF /* NSLayoutConstraint+ORIBProperty.m */,
+				666E4650244E925D006E07DF /* UIButton+ORIBProperty.m */,
+				666E4651244E925D006E07DF /* NSObject+ORIBProperty.m */,
+				666E4652244E925D006E07DF /* UITextView+ORIBProperty.m */,
+			);
+			path = IBProperty;
+			sourceTree = "<group>";
+		};
+		666E4653244E925D006E07DF /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				666E4654244E925D006E07DF /* Aspects.h */,
+				666E4655244E925D006E07DF /* Aspects.m */,
+			);
+			path = Aspects;
+			sourceTree = "<group>";
+		};
+		666E4656244E925D006E07DF /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				666E4657244E925D006E07DF /* lightM_04.caf */,
+				666E4658244E925D006E07DF /* lightM_02.caf */,
+				666E4659244E925D006E07DF /* lightM_03.caf */,
+				666E465A244E925D006E07DF /* lightM_01.caf */,
+				666E465B244E925D006E07DF /* hotM_02.caf */,
+				666E465C244E925D006E07DF /* hotM_01.caf */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -519,10 +721,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				666E4673244E925D006E07DF /* lightM_01.caf in Resources */,
 				06395CE11FDE83DF0055BB08 /* LaunchScreen.storyboard in Resources */,
+				666E4674244E925D006E07DF /* hotM_02.caf in Resources */,
 				06395CDE1FDE83DF0055BB08 /* Assets.xcassets in Resources */,
+				666E4670244E925D006E07DF /* lightM_04.caf in Resources */,
+				666E4671244E925D006E07DF /* lightM_02.caf in Resources */,
 				D4704E0F203D004E00F18250 /* launch.jpg in Resources */,
+				666E4675244E925D006E07DF /* hotM_01.caf in Resources */,
 				06395CDC1FDE83DF0055BB08 /* Main.storyboard in Resources */,
+				666E4672244E925D006E07DF /* lightM_03.caf in Resources */,
 				D4704E08203952A900F18250 /* SettingViewController.xib in Resources */,
 				D4704E0D2039567600F18250 /* FunctionDescC.xib in Resources */,
 			);
@@ -552,35 +760,55 @@
 				06395D1C1FDE84460055BB08 /* AppDelegate.m in Sources */,
 				06FE52121FE78E5700CFC17B /* BabyBluetooth.m in Sources */,
 				06FE51FB1FE774F900CFC17B /* SendDataTool.m in Sources */,
+				666E4666244E925D006E07DF /* UICollectionViewFlowLayout+ORIBProperty.m in Sources */,
+				666E466B244E925D006E07DF /* NSLayoutConstraint+ORIBProperty.m in Sources */,
 				06FE51F11FE7717800CFC17B /* MPCentralManager.m in Sources */,
+				666E466D244E925D006E07DF /* NSObject+ORIBProperty.m in Sources */,
 				06FE52131FE78E5700CFC17B /* BabyCallback.m in Sources */,
 				06FE51F81FE7719F00CFC17B /* PeripheralDetailViewController.m in Sources */,
 				06FE52151FE78E5700CFC17B /* BabyDefine.m in Sources */,
 				06FE52161FE78E5700CFC17B /* BabyOptions.m in Sources */,
 				06FE51F41FE7717800CFC17B /* MPPeripheral.m in Sources */,
 				06FE51F31FE7717800CFC17B /* MPDescriptor.m in Sources */,
+				666E465D244E925D006E07DF /* BaseTableViewController.m in Sources */,
+				666E4663244E925D006E07DF /* NSObject+YYModel.m in Sources */,
 				06395D211FDE84460055BB08 /* DeviceViewController.m in Sources */,
 				06D7D94A2005FBEA009FA396 /* PridePeripheral.m in Sources */,
 				06FE52171FE78E5700CFC17B /* BabyPeripheralManager.m in Sources */,
 				06FE52141FE78E5700CFC17B /* BabyCentralManager.m in Sources */,
+				666E467D244E9431006E07DF /* AddClockView.m in Sources */,
 				06FE51F51FE7717800CFC17B /* MPService.m in Sources */,
+				666E4668244E925D006E07DF /* UITextField+ORIBProperty.m in Sources */,
+				666E4662244E925D006E07DF /* YYMemoryCache.m in Sources */,
 				06FE51F21FE7717800CFC17B /* MPCharacteristic.m in Sources */,
+				666E4660244E925D006E07DF /* YYCache.m in Sources */,
 				061F7B891FE38546007D2AE7 /* RKDropdownAlert.m in Sources */,
 				5833BBD423161C8400B708EA /* UIView+BSExtension.m in Sources */,
+				666E4661244E925D006E07DF /* YYKVStorage.m in Sources */,
+				666E466F244E925D006E07DF /* Aspects.m in Sources */,
 				06FE51F01FE7717800CFC17B /* MPBluetoothUtils.m in Sources */,
+				666E4665244E925D006E07DF /* UIControl+ORIBProperty.m in Sources */,
 				D4704E0C2039567600F18250 /* FunctionDescC.m in Sources */,
+				666E465F244E925D006E07DF /* YYDiskCache.m in Sources */,
 				06395D1E1FDE84460055BB08 /* MainViewController.m in Sources */,
 				06FE52181FE78E5700CFC17B /* BabyRhythm.m in Sources */,
 				06395CE41FDE83DF0055BB08 /* main.m in Sources */,
+				666E466C244E925D006E07DF /* UIButton+ORIBProperty.m in Sources */,
 				06395D1D1FDE84460055BB08 /* LanguageSettingViewController.m in Sources */,
 				061F7B851FE38152007D2AE7 /* MBProgressHUD.m in Sources */,
 				06FE51FE1FE78DFF00CFC17B /* BBViewController.m in Sources */,
 				06FE521A1FE78E5700CFC17B /* BabyToy.m in Sources */,
+				666E466E244E925D006E07DF /* UITextView+ORIBProperty.m in Sources */,
 				06FE51E01FE76E7D00CFC17B /* MPPeripheralListViewController.m in Sources */,
 				06395D1A1FDE84460055BB08 /* DeviceCell.m in Sources */,
+				666E4664244E925D006E07DF /* YYClassInfo.m in Sources */,
+				666E466A244E925D006E07DF /* UIImageView+ORIBProperty.m in Sources */,
 				06395D1F1FDE84460055BB08 /* DeviceListViewController.m in Sources */,
+				666E4667244E925D006E07DF /* UILabel+ORIBProperty.m in Sources */,
 				06FE52191FE78E5700CFC17B /* BabySpeaker.m in Sources */,
 				06395D1B1FDE84460055BB08 /* StoreViewController.m in Sources */,
+				666E4669244E925D006E07DF /* UIView+ORIBProperty.m in Sources */,
+				666E465E244E925D006E07DF /* UNNotificationsManager.m in Sources */,
 				06395D201FDE84460055BB08 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
