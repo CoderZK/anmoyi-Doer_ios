@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AVFoundation/AVFoundation.h>
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property(nonatomic,strong)AVAudioPlayer *avPlayer;
+
+@property(nonatomic,assign)BOOL isClocking;
 
 @end
 

@@ -12,6 +12,7 @@
 #import "DeviceViewController.h"
 #import "MBProgressHUD.h"
 #import "PridePeripheral.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface BBViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -510,6 +511,18 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 
+    
+//       [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error:nil];
+//       [[AVAudioSession sharedInstance] setActive: YES error: nil];
+//       
+//       //初始化音频播放器
+//       NSError *playerError;
+//       NSURL *urlSound = [[NSURL alloc]initWithString:[[NSBundle mainBundle]pathForResource:@"TTTTT" ofType:@"mp3"]];
+//       AVAudioPlayer *playerSound = [[AVAudioPlayer alloc] initWithContentsOfURL:urlSound error:&playerError];
+//       playerSound.numberOfLoops = -1;//无限播放
+//       [playerSound play];
+    
+    
     DeviceViewController *deviceVC = [[DeviceViewController alloc] initWithPeripheral:nil
                                                                        characteristic:nil
                                                                            DeviceType:self.deviceType  language:self.language];

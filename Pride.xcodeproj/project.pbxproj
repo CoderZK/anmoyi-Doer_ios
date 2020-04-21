@@ -45,6 +45,11 @@
 		06FE52191FE78E5700CFC17B /* BabySpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE520F1FE78E5600CFC17B /* BabySpeaker.m */; };
 		06FE521A1FE78E5700CFC17B /* BabyToy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE52111FE78E5600CFC17B /* BabyToy.m */; };
 		5833BBD423161C8400B708EA /* UIView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5833BBD223161C8300B708EA /* UIView+BSExtension.m */; };
+		5874AAD7244EA3D800E0FC43 /* UIView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5874AAD6244EA3D800E0FC43 /* UIView+BSExtension.m */; };
+		588A2016244EC4E600B5AEE6 /* zkSignleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A2014244EC4E600B5AEE6 /* zkSignleTool.m */; };
+		588A201B244ED48000B5AEE6 /* TTTTT.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 588A201A244ED48000B5AEE6 /* TTTTT.mp3 */; };
+		588A201F244EE87500B5AEE6 /* ppppp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 588A201E244EE87500B5AEE6 /* ppppp.wav */; };
+		588A2022244EF78A00B5AEE6 /* ClcokShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A2021244EF78A00B5AEE6 /* ClcokShowView.m */; };
 		666E465D244E925D006E07DF /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E4627244E925D006E07DF /* BaseTableViewController.m */; };
 		666E465E244E925D006E07DF /* UNNotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E462C244E925D006E07DF /* UNNotificationsManager.m */; };
 		666E465F244E925D006E07DF /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 666E462F244E925D006E07DF /* YYDiskCache.m */; };
@@ -173,6 +178,14 @@
 		06FE52111FE78E5600CFC17B /* BabyToy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyToy.m; sourceTree = "<group>"; };
 		5833BBD223161C8300B708EA /* UIView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSExtension.m"; sourceTree = "<group>"; };
 		5833BBD323161C8400B708EA /* UIView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSExtension.h"; sourceTree = "<group>"; };
+		5874AAD5244EA3D800E0FC43 /* UIView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSExtension.h"; sourceTree = "<group>"; };
+		5874AAD6244EA3D800E0FC43 /* UIView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSExtension.m"; sourceTree = "<group>"; };
+		588A2014244EC4E600B5AEE6 /* zkSignleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkSignleTool.m; sourceTree = "<group>"; };
+		588A2015244EC4E600B5AEE6 /* zkSignleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkSignleTool.h; sourceTree = "<group>"; };
+		588A201A244ED48000B5AEE6 /* TTTTT.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TTTTT.mp3; sourceTree = "<group>"; };
+		588A201E244EE87500B5AEE6 /* ppppp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ppppp.wav; sourceTree = "<group>"; };
+		588A2020244EF78A00B5AEE6 /* ClcokShowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClcokShowView.h; sourceTree = "<group>"; };
+		588A2021244EF78A00B5AEE6 /* ClcokShowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClcokShowView.m; sourceTree = "<group>"; };
 		666E4627244E925D006E07DF /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		666E4628244E925D006E07DF /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		666E462B244E925D006E07DF /* UNNotificationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UNNotificationsManager.h; sourceTree = "<group>"; };
@@ -506,6 +519,12 @@
 				666E4628244E925D006E07DF /* BaseTableViewController.h */,
 				666E467B244E9431006E07DF /* AddClockView.h */,
 				666E467C244E9431006E07DF /* AddClockView.m */,
+				588A2020244EF78A00B5AEE6 /* ClcokShowView.h */,
+				588A2021244EF78A00B5AEE6 /* ClcokShowView.m */,
+				5874AAD5244EA3D800E0FC43 /* UIView+BSExtension.h */,
+				5874AAD6244EA3D800E0FC43 /* UIView+BSExtension.m */,
+				588A2015244EC4E600B5AEE6 /* zkSignleTool.h */,
+				588A2014244EC4E600B5AEE6 /* zkSignleTool.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -605,6 +624,8 @@
 		666E4656244E925D006E07DF /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				588A201E244EE87500B5AEE6 /* ppppp.wav */,
+				588A201A244ED48000B5AEE6 /* TTTTT.mp3 */,
 				666E4657244E925D006E07DF /* lightM_04.caf */,
 				666E4658244E925D006E07DF /* lightM_02.caf */,
 				666E4659244E925D006E07DF /* lightM_03.caf */,
@@ -728,11 +749,13 @@
 				666E4670244E925D006E07DF /* lightM_04.caf in Resources */,
 				666E4671244E925D006E07DF /* lightM_02.caf in Resources */,
 				D4704E0F203D004E00F18250 /* launch.jpg in Resources */,
+				588A201F244EE87500B5AEE6 /* ppppp.wav in Resources */,
 				666E4675244E925D006E07DF /* hotM_01.caf in Resources */,
 				06395CDC1FDE83DF0055BB08 /* Main.storyboard in Resources */,
 				666E4672244E925D006E07DF /* lightM_03.caf in Resources */,
 				D4704E08203952A900F18250 /* SettingViewController.xib in Resources */,
 				D4704E0D2039567600F18250 /* FunctionDescC.xib in Resources */,
+				588A201B244ED48000B5AEE6 /* TTTTT.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,10 +785,12 @@
 				06FE51FB1FE774F900CFC17B /* SendDataTool.m in Sources */,
 				666E4666244E925D006E07DF /* UICollectionViewFlowLayout+ORIBProperty.m in Sources */,
 				666E466B244E925D006E07DF /* NSLayoutConstraint+ORIBProperty.m in Sources */,
+				5874AAD7244EA3D800E0FC43 /* UIView+BSExtension.m in Sources */,
 				06FE51F11FE7717800CFC17B /* MPCentralManager.m in Sources */,
 				666E466D244E925D006E07DF /* NSObject+ORIBProperty.m in Sources */,
 				06FE52131FE78E5700CFC17B /* BabyCallback.m in Sources */,
 				06FE51F81FE7719F00CFC17B /* PeripheralDetailViewController.m in Sources */,
+				588A2022244EF78A00B5AEE6 /* ClcokShowView.m in Sources */,
 				06FE52151FE78E5700CFC17B /* BabyDefine.m in Sources */,
 				06FE52161FE78E5700CFC17B /* BabyOptions.m in Sources */,
 				06FE51F41FE7717800CFC17B /* MPPeripheral.m in Sources */,
@@ -805,6 +830,7 @@
 				666E466A244E925D006E07DF /* UIImageView+ORIBProperty.m in Sources */,
 				06395D1F1FDE84460055BB08 /* DeviceListViewController.m in Sources */,
 				666E4667244E925D006E07DF /* UILabel+ORIBProperty.m in Sources */,
+				588A2016244EC4E600B5AEE6 /* zkSignleTool.m in Sources */,
 				06FE52191FE78E5700CFC17B /* BabySpeaker.m in Sources */,
 				06395D1B1FDE84460055BB08 /* StoreViewController.m in Sources */,
 				666E4669244E925D006E07DF /* UIView+ORIBProperty.m in Sources */,
@@ -975,14 +1001,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = C58AW9JAJK;
+				DEVELOPMENT_TEAM = N6ZU25A67U;
 				INFOPLIST_FILE = Pride/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ffyy.CNDOER.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4738ee22-c4c1-40b2-9273-486f090fb31c";
-				PROVISIONING_PROFILE_SPECIFIER = comanmoyidev;
+				PROVISIONING_PROFILE_SPECIFIER = xuxuecom;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;

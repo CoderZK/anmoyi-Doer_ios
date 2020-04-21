@@ -13,7 +13,8 @@
 #import "BabyBluetooth.h"
 #import "MBProgressHUD.h"
 #import "UIView+BSExtension.h"
-
+#import "AddClockView.h"
+#import "ClcokShowView.h"
 @interface DeviceViewController ()<UIGestureRecognizerDelegate>
 
 @property(nonatomic,strong)UIImageView * gear1ImageView;
@@ -38,6 +39,8 @@
 @property(nonatomic,strong)UIButton *editBt;//编辑按钮
 @property(nonatomic , strong)UIButton *clockBt;
 @property(nonatomic,strong)UILabel *titleLB;//编辑后的名字
+@property(nonatomic,strong)AddClockView *clockView;
+@property(nonatomic,strong)ClcokShowView *clockShowView;
 @end
 
 @implementation DeviceViewController
@@ -63,6 +66,20 @@
         isLightUp = NO;
     }
     return self;
+}
+
+- (AddClockView *)clockView {
+    if (_clockView == nil) {
+        _clockView = [[AddClockView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    }
+    return _clockView;
+}
+
+- (ClcokShowView *)clockShowView {
+    if (_clockShowView == nil) {
+        _clockShowView = [[ClcokShowView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    }
+    return _clockShowView;
 }
 
 - (void)viewDidLoad {
@@ -254,6 +271,7 @@
      button.backgroundColor = [UIColor redColor];
     [self.view addSubview:button];
     self.clockBt = button;
+    [button addTarget:self action:@selector(clockShow:) forControlEvents:UIControlEventTouchUpInside];
     
     if (SCREEN_HEIGHT <= 667) {
         stateLabel.frame = CGRectMake(0, 0.8 *SCREEN_WIDTH + 65 + 20 , SCREEN_WIDTH, 15);
@@ -309,6 +327,19 @@
 //    }
     
     [self setUpMemoryBtn];
+}
+
+//展示闹钟
+- (void)clockShow:(UIButton *)button {
+    
+    
+    [self.clockView show];
+    self.clockView.model = [[zkSignleTool shareTool] getDataModelWithKey:@"123456"];
+    
+//    [self.clockShowView show];
+    
+    
+    
 }
 
 - (void)editAction:(UIButton *)button {
