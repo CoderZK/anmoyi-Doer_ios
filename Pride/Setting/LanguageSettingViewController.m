@@ -9,6 +9,8 @@
 #import "LanguageSettingViewController.h"
 #import "define.h"
 #import "MainViewController.h"
+#import "Crash.h"
+#import "FangZhiCrachVC.h"
 
 @interface LanguageSettingViewController ()
 
@@ -69,6 +71,17 @@
     self.englishLabel.textAlignment = NSTextAlignmentCenter;
     self.englishLabel.text = @"English";
     [self.englishSelection addSubview:self.englishLabel];
+    
+    
+    
+    
+    
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -103,19 +116,40 @@
     
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:language==0?@"确定":@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
+        [[NSUserDefaults standardUserDefaults]setInteger:language forKey:@"language"];
+        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"opened"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"languageUpdate" object:nil];
         
-        MainViewController *mainVC = [[MainViewController alloc]initWithLanguage:language];
-        
-        [self presentViewController:mainVC animated:YES completion:^{
-            [[NSUserDefaults standardUserDefaults]setInteger:language forKey:@"language"];
-            [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"opened"];
-            [[NSNotificationCenter defaultCenter]postNotificationName:@"languageUpdate" object:nil];
-        }];
+        MainViewController *mainVC = [[MainViewController alloc] initWithLanguage:language];
+   
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIApplication sharedApplication].keyWindow.rootViewController = mainVC;
+        });
         
     }];
     [alert addAction:okAction];
     
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:language==0?@"取消":@"Cancel" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:language==0?@"取消":@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        //注册消息处理函数的处理方法
+        NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+        // 发送崩溃日志
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        
+        NSString *dataPath = [path stringByAppendingPathComponent:@"error.log"];
+        
+        NSData *data = [NSData dataWithContentsOfFile:dataPath];
+        
+        NSString *content=[NSString stringWithContentsOfFile:dataPath encoding:NSUTF8StringEncoding error:nil];
+        
+        NSLog(@"\n\n\n---%@",content);
+        if (data != nil) {
+                   
+            [self presentViewController:[[FangZhiCrachVC alloc] init] animated:YES completion:nil];
+                   
+        }
+    }];
     [alert addAction:cancelAction];
     [self presentViewController:alert animated:YES completion:nil];
 

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,21 +21,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ecq-38-Vsm">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ecq-38-Vsm">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于杜勒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzt-Db-oJe">
-                    <rect key="frame" x="153" y="35" width="69.5" height="21"/>
+                    <rect key="frame" x="153" y="15" width="69.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="logo_top" translatesAutoresizingMaskIntoConstraints="NO" id="LXk-jE-48X">
-                    <rect key="frame" x="102" y="101" width="171" height="38"/>
+                    <rect key="frame" x="102" y="81" width="171" height="38"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本v1.0.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKq-Wj-ppa">
-                    <rect key="frame" x="149.5" y="172" width="76" height="21"/>
+                    <rect key="frame" x="149.5" y="152" width="76" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.93592393398284912" green="0.51144927740097046" blue="0.20053192973136902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -49,7 +46,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3me-Yv-H87">
-                    <rect key="frame" x="10" y="30" width="35" height="35"/>
+                    <rect key="frame" x="10" y="10" width="35" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="06k-v3-dNM"/>
                         <constraint firstAttribute="width" constant="35" id="wpY-ff-p74"/>
@@ -64,6 +61,7 @@
             <constraints>
                 <constraint firstItem="kKq-Wj-ppa" firstAttribute="top" secondItem="LXk-jE-48X" secondAttribute="bottom" constant="33" id="6ry-bc-23t"/>
                 <constraint firstItem="UQX-Pm-R1o" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DFl-pR-ptV"/>
+                <constraint firstItem="ecq-38-Vsm" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="EOI-Vc-Ubl"/>
                 <constraint firstItem="LXk-jE-48X" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="EnG-h6-0Tt"/>
                 <constraint firstItem="Mzt-Db-oJe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GDm-JQ-7PF"/>
                 <constraint firstItem="3me-Yv-H87" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="Gx9-9K-RPG"/>
@@ -71,6 +69,9 @@
                 <constraint firstItem="LXk-jE-48X" firstAttribute="top" secondItem="Mzt-Db-oJe" secondAttribute="bottom" constant="45" id="JpH-TW-QD4"/>
                 <constraint firstItem="3me-Yv-H87" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="aEs-6K-KbF"/>
                 <constraint firstItem="Mzt-Db-oJe" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="15" id="atx-Ss-PQh"/>
+                <constraint firstItem="ecq-38-Vsm" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="gcw-u7-FHi"/>
+                <constraint firstItem="ecq-38-Vsm" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="iLc-ck-YtF"/>
+                <constraint firstItem="ecq-38-Vsm" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="iQH-Bn-hQl"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="UQX-Pm-R1o" secondAttribute="bottom" constant="80" id="tdg-Dl-DfT"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

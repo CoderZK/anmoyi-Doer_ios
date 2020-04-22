@@ -62,6 +62,7 @@ static zkSignleTool * tool = nil;
         NSData *data = [NSKeyedArchiver archivedDataWithRootObject:clcokModel];
         if (data) {
             [[NSUserDefaults standardUserDefaults] setObject:data forKey:key];
+            [[NSUserDefaults standardUserDefaults] synchronize];
         }
     }
     

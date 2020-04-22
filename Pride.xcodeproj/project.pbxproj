@@ -44,6 +44,9 @@
 		06FE52181FE78E5700CFC17B /* BabyRhythm.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE520D1FE78E5600CFC17B /* BabyRhythm.m */; };
 		06FE52191FE78E5700CFC17B /* BabySpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE520F1FE78E5600CFC17B /* BabySpeaker.m */; };
 		06FE521A1FE78E5700CFC17B /* BabyToy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FE52111FE78E5600CFC17B /* BabyToy.m */; };
+		58237841244FF0880083D2C0 /* FangZhiCrachVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5823783C244FF0870083D2C0 /* FangZhiCrachVC.m */; };
+		58237842244FF0880083D2C0 /* FangZhiCrachVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5823783D244FF0880083D2C0 /* FangZhiCrachVC.xib */; };
+		58237843244FF0880083D2C0 /* Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 58237840244FF0880083D2C0 /* Crash.m */; };
 		5833BBD423161C8400B708EA /* UIView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5833BBD223161C8300B708EA /* UIView+BSExtension.m */; };
 		5874AAD7244EA3D800E0FC43 /* UIView+BSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5874AAD6244EA3D800E0FC43 /* UIView+BSExtension.m */; };
 		588A2016244EC4E600B5AEE6 /* zkSignleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 588A2014244EC4E600B5AEE6 /* zkSignleTool.m */; };
@@ -105,7 +108,7 @@
 		061F7B801FE38152007D2AE7 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		061F7B871FE38546007D2AE7 /* RKDropdownAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKDropdownAlert.h; sourceTree = "<group>"; };
 		061F7B881FE38546007D2AE7 /* RKDropdownAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKDropdownAlert.m; sourceTree = "<group>"; };
-		06395CD11FDE83DF0055BB08 /* Pride.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pride.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06395CD11FDE83DF0055BB08 /* Pride.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Pride.app; path = "左右智能.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06395CDB1FDE83DF0055BB08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06395CDD1FDE83DF0055BB08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06395CE01FDE83DF0055BB08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -176,6 +179,11 @@
 		06FE520F1FE78E5600CFC17B /* BabySpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabySpeaker.m; sourceTree = "<group>"; };
 		06FE52101FE78E5600CFC17B /* BabyToy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyToy.h; sourceTree = "<group>"; };
 		06FE52111FE78E5600CFC17B /* BabyToy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyToy.m; sourceTree = "<group>"; };
+		5823783C244FF0870083D2C0 /* FangZhiCrachVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FangZhiCrachVC.m; sourceTree = "<group>"; };
+		5823783D244FF0880083D2C0 /* FangZhiCrachVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FangZhiCrachVC.xib; sourceTree = "<group>"; };
+		5823783E244FF0880083D2C0 /* FangZhiCrachVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FangZhiCrachVC.h; sourceTree = "<group>"; };
+		5823783F244FF0880083D2C0 /* Crash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crash.h; sourceTree = "<group>"; };
+		58237840244FF0880083D2C0 /* Crash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crash.m; sourceTree = "<group>"; };
 		5833BBD223161C8300B708EA /* UIView+BSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSExtension.m"; sourceTree = "<group>"; };
 		5833BBD323161C8400B708EA /* UIView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSExtension.h"; sourceTree = "<group>"; };
 		5874AAD5244EA3D800E0FC43 /* UIView+BSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSExtension.h"; sourceTree = "<group>"; };
@@ -398,6 +406,11 @@
 		0645733C1FE8C576007388F7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5823783F244FF0880083D2C0 /* Crash.h */,
+				58237840244FF0880083D2C0 /* Crash.m */,
+				5823783E244FF0880083D2C0 /* FangZhiCrachVC.h */,
+				5823783C244FF0870083D2C0 /* FangZhiCrachVC.m */,
+				5823783D244FF0880083D2C0 /* FangZhiCrachVC.xib */,
 				06395D191FDE84460055BB08 /* AppDelegate.h */,
 				06395D0B1FDE84430055BB08 /* AppDelegate.m */,
 				06395D111FDE84440055BB08 /* define.h */,
@@ -745,6 +758,7 @@
 				666E4673244E925D006E07DF /* lightM_01.caf in Resources */,
 				06395CE11FDE83DF0055BB08 /* LaunchScreen.storyboard in Resources */,
 				666E4674244E925D006E07DF /* hotM_02.caf in Resources */,
+				58237842244FF0880083D2C0 /* FangZhiCrachVC.xib in Resources */,
 				06395CDE1FDE83DF0055BB08 /* Assets.xcassets in Resources */,
 				666E4670244E925D006E07DF /* lightM_04.caf in Resources */,
 				666E4671244E925D006E07DF /* lightM_02.caf in Resources */,
@@ -780,6 +794,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58237841244FF0880083D2C0 /* FangZhiCrachVC.m in Sources */,
 				06395D1C1FDE84460055BB08 /* AppDelegate.m in Sources */,
 				06FE52121FE78E5700CFC17B /* BabyBluetooth.m in Sources */,
 				06FE51FB1FE774F900CFC17B /* SendDataTool.m in Sources */,
@@ -816,6 +831,7 @@
 				D4704E0C2039567600F18250 /* FunctionDescC.m in Sources */,
 				666E465F244E925D006E07DF /* YYDiskCache.m in Sources */,
 				06395D1E1FDE84460055BB08 /* MainViewController.m in Sources */,
+				58237843244FF0880083D2C0 /* Crash.m in Sources */,
 				06FE52181FE78E5700CFC17B /* BabyRhythm.m in Sources */,
 				06395CE41FDE83DF0055BB08 /* main.m in Sources */,
 				666E466C244E925D006E07DF /* UIButton+ORIBProperty.m in Sources */,
@@ -1005,8 +1021,8 @@
 				INFOPLIST_FILE = Pride/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.com.ffyy.CNDOER.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.qqyzj.app;
+				PRODUCT_NAME = "左右智能";
 				PROVISIONING_PROFILE = "4738ee22-c4c1-40b2-9273-486f090fb31c";
 				PROVISIONING_PROFILE_SPECIFIER = com.XXX;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1017,17 +1033,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = C58AW9JAJK;
+				DEVELOPMENT_TEAM = 4744VSH78G;
 				INFOPLIST_FILE = Pride/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ffyy.CNDOER.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.com.qqyzj.app;
+				PRODUCT_NAME = "左右智能";
 				PROVISIONING_PROFILE = "4738ee22-c4c1-40b2-9273-486f090fb31c";
-				PROVISIONING_PROFILE_SPECIFIER = comanmoyidis;
+				PROVISIONING_PROFILE_SPECIFIER = comcomDIS;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

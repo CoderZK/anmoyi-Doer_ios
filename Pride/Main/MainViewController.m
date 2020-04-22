@@ -50,10 +50,8 @@
     [[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
     [self.tabBar setClipsToBounds:YES];
 
-    
-    
+
     [self setUpUI];
-    
     self.selectedIndex = 1;
     
 }
@@ -67,7 +65,7 @@
 #pragma mark --   private
 
 -(void)updateLanguage{
-    NSInteger language = [[NSUserDefaults standardUserDefaults]integerForKey:@"language"];
+    NSInteger language = [[NSUserDefaults standardUserDefaults] integerForKey:@"language"];
     self.storeLabel.text = language == 0?@"商城":@"Store";
     self.settingLabel.text = language == 0?@"设置":@"Setting";
     self.indexLabel.text = language == 0?@"主页":@"Home";

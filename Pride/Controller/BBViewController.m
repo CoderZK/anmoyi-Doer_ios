@@ -520,6 +520,11 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 
     
+//    NSArray * aarr = @[@"1"];
+//    NSLog(@"%@",aarr[1]);
+
+    
+    
 //       [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error:nil];
 //       [[AVAudioSession sharedInstance] setActive: YES error: nil];
 //       
@@ -530,11 +535,11 @@
 //       playerSound.numberOfLoops = -1;//无限播放
 //       [playerSound play];
     
-    
-    DeviceViewController *deviceVC = [[DeviceViewController alloc] initWithPeripheral:nil
-                                                                       characteristic:nil
-                                                                           DeviceType:self.deviceType  language:self.language];
-    [self.navigationController pushViewController:deviceVC animated:YES];
+//    
+//    DeviceViewController *deviceVC = [[DeviceViewController alloc] initWithPeripheral:nil
+//                                                                       characteristic:nil
+//                                                                           DeviceType:self.deviceType  language:self.language];
+//    [self.navigationController pushViewController:deviceVC animated:YES];
 
 //    DeviceViewController *deviceVC = [[DeviceViewController alloc]init];
 //    [self.navigationController pushViewController:deviceVC animated:YES];

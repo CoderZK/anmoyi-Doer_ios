@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>CNDOER</string>
+	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -27,19 +27,22 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>需要您的同意, 左右智能才能访问蓝牙</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>需要您的同意, CNDOER才能访问蓝牙</string>
+	<string>需要您的同意, 左右智能才能访问蓝牙</string>
 	<key>NSCameraUsageDescription</key>
-	<string>需要您的同意,CNDOER才能访问相机</string>
+	<string>需要您的同意,左右智能才能访问相机</string>
 	<key>NSLocationUsageDescription</key>
-	<string>需要您的同意, CNDOER才能访问位置</string>
+	<string>需要您的同意, 左右智能才能访问位置</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>App需要您的同意, CNDOER才能在使用期间访问位置</string>
+	<string>App需要您的同意, 左右智能才能在使用期间访问位置</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>需要您的同意,CNDOER才能访问相册</string>
+	<string>需要您的同意,左右智能才能访问相册</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
+		<string>bluetooth-central</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

@@ -260,6 +260,9 @@
         [self diss];
         
     }else {
+        
+        
+        
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"设备断开无法添加闹钟" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction * action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:nil];
         [alertController addAction:action];

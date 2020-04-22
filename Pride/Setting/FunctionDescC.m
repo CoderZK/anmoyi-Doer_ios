@@ -27,7 +27,7 @@
         self.ibVersionLabel.text = @"版本v1.0.1";
         self.ibCopyRightLabel.text = @"登丰公司 版权所有";
     } else {
-        self.ibAboutLabel.text = @"ABOUT CNDOER";
+        self.ibAboutLabel.text = @"ABOUT 左右智能";
         self.ibVersionLabel.text = @"Rev v1.0.1";
         self.ibCopyRightLabel.text = @"Copyright@2018 DengFeng. All Rights Reserverd.";
     }

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FangZhiCrachVC">
+            <connections>
+                <outlet property="TV" destination="z8n-5K-JF4" id="cLP-fT-tOG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z8n-5K-JF4">
+                    <rect key="frame" x="10" y="104" width="394" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="rW3-S8-WV7"/>
+                    </constraints>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APP使用中有崩溃,长按上面的复制按钮复制,发送给需要的人员(删除日志既可正常使用)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGs-RK-XS3">
+                    <rect key="frame" x="10" y="314" width="394" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="cSI-C5-NO2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.82352941180000006" green="0.13725490200000001" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="size" keyPath="ib_shadowOffset">
+                            <size key="value" width="0.0" height="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPH-Yl-Kfv">
+                    <rect key="frame" x="10" y="389" width="394" height="35"/>
+                    <color key="backgroundColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="sNW-mL-B9R"/>
+                    </constraints>
+                    <state key="normal" title="删除日志"/>
+                    <connections>
+                        <action selector="delete:" destination="-1" eventType="touchUpInside" id="S8i-Nv-ohq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8r-kL-0ao">
+                    <rect key="frame" x="314" y="269" width="90" height="30"/>
+                    <color key="backgroundColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="ZBx-R1-HDx"/>
+                        <constraint firstAttribute="height" constant="30" id="pvC-pl-imJ"/>
+                    </constraints>
+                    <state key="normal" title="复制日志"/>
+                    <connections>
+                        <action selector="fuzhi:" destination="-1" eventType="touchUpInside" id="sdd-Xx-Cln"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="0.094117647060000004" green="0.10980392160000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="D8r-kL-0ao" secondAttribute="trailing" constant="10" id="5gL-UX-bK8"/>
+                <constraint firstItem="bGs-RK-XS3" firstAttribute="top" secondItem="D8r-kL-0ao" secondAttribute="bottom" constant="15" id="FGi-O3-3ez"/>
+                <constraint firstItem="z8n-5K-JF4" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="60" id="JkU-At-6af"/>
+                <constraint firstItem="bGs-RK-XS3" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="LqB-RL-OYv"/>
+                <constraint firstItem="gPH-Yl-Kfv" firstAttribute="top" secondItem="bGs-RK-XS3" secondAttribute="bottom" constant="15" id="Nyb-rE-31L"/>
+                <constraint firstItem="D8r-kL-0ao" firstAttribute="top" secondItem="z8n-5K-JF4" secondAttribute="bottom" constant="15" id="O6L-jq-lgr"/>
+                <constraint firstItem="gPH-Yl-Kfv" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="aVc-nL-x3v"/>
+                <constraint firstItem="z8n-5K-JF4" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="bq5-gJ-a6R"/>
+                <constraint firstAttribute="trailing" secondItem="bGs-RK-XS3" secondAttribute="trailing" constant="10" id="cp7-mk-w6o"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gPH-Yl-Kfv" secondAttribute="trailing" constant="10" id="hAd-RD-3Ur"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="z8n-5K-JF4" secondAttribute="trailing" constant="10" id="pTC-Xw-68y"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
+        </view>
+    </objects>
+</document>

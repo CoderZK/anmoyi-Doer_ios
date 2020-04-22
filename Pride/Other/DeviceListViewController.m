@@ -128,7 +128,7 @@
     titleLabel.font = [UIFont boldSystemFontOfSize:18];
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.textColor = [UIColor blackColor];
-    titleLabel.text =@"CNDOER";
+    titleLabel.text =@"左右智能";
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:titleLabel];
     
