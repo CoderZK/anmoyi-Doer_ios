@@ -26,12 +26,12 @@
 
 @implementation AppDelegate
 
-- (ClcokShowView *)clockShowView {
-    if (_clockShowView == nil) {
-        _clockShowView = [[ClcokShowView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    }
-    return _clockShowView;
-}
+//- (ClcokShowView *)clockShowView {
+//    if (_clockShowView == nil) {
+//        _clockShowView = [[ClcokShowView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+//    }
+//    return _clockShowView;
+//}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -53,6 +53,8 @@
     }
     
     [self.window makeKeyAndVisible];
+    
+    [zkSignleTool shareTool].macKey = @"123456";
     
 //    NSArray * arr = @[@""];
 //    NSLog(@"%@",arr[1]);
@@ -185,7 +187,7 @@
             if (self.isClocking == NO) {
                 
                 NSLog(@"\n\n-----%@",@"播放声音");
-                
+                self.clockShowView =  [[ClcokShowView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
                 [self.clockShowView show];
                 __weak typeof(self) weakSelf = self;
                 self.clockShowView.clossClcokBlock = ^{

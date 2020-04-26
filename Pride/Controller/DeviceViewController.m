@@ -808,11 +808,13 @@
         
         UIButton *down_btn= [[UIButton alloc]initWithFrame:CGRectMake(left + i * (space + 91), SCREEN_HEIGHT *2/7+100,91, 60)];
         down_btn.tag = i+3;
+        
         [down_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"bed%d",i+3]] forState:UIControlStateNormal];
         [down_btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"bed0-%d",i+3]] forState:UIControlStateHighlighted];
         [self.view addSubview:down_btn];
-        
+        down_btn.hidden = NO;
         if (i == 1) {
+            down_btn.hidden = YES;
             CGFloat labelHeight =0.5 * SCREEN_WIDTH * 0.1;
             UILabel *leftLabel = [[UILabel alloc]initWithFrame:CGRectMake(0,labelHeight, SCREEN_WIDTH *0.2, labelHeight)];
             leftLabel.userInteractionEnabled= YES;

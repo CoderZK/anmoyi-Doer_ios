@@ -29,6 +29,11 @@
 
 - (UIView *)blackTwoView {
     if (_blackTwoView == nil) {
+        
+        NSInteger language = [[NSUserDefaults standardUserDefaults]integerForKey:@"language"];
+
+        
+        
         _blackTwoView = [[UIView  alloc] initWithFrame:CGRectMake(30, 120, SCREEN_WIDTH-60, SCREEN_HEIGHT - 240)];
         _blackTwoView.backgroundColor = [UIColor blackColor];
         
@@ -40,18 +45,32 @@
         UILabel * lb1 =[[UILabel alloc] initWithFrame:CGRectMake(50, 25, self.blackV.width - 100, 20)];
         lb1.textColor = [UIColor whiteColor];
         lb1.font = [UIFont systemFontOfSize:15 weight:0.2];
-        lb1.text = @"编辑闹钟";
+        
+        NSString * str1 = @"编辑闹钟";
+        if (language == 1) {
+            str1 = @"Edit the alarm clock";
+        }
+        
+        lb1.text =str1;
         lb1.textAlignment = NSTextAlignmentCenter;
         [_blackTwoView addSubview:lb1];
         
+        NSString * str2 = @"返回";
+        if (language == 1) {
+            str2 = @"back";
+        }
+        
         UIButton * buttonBack = [[UIButton alloc] initWithFrame:CGRectMake(10, 15, 70, 40)];
-        [buttonBack setTitle:@"返回" forState:UIControlStateNormal];
+        [buttonBack setTitle:str2 forState:UIControlStateNormal];
         [buttonBack setTitleColor:[UIColor colorWithRed:147/255.0 green:91/255.0 blue:24/255.0 alpha:1.0] forState:UIControlStateNormal];
         [buttonBack setImage:[UIImage imageNamed:@"zkfan"] forState:UIControlStateNormal];
         [buttonBack addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
         [_blackTwoView addSubview:buttonBack];
         
         NSArray * arr = @[@"每周日",@"每周一",@"每周二",@"每周三",@"每周四",@"每周五",@"每周六"];
+        if (language == 1) {
+            arr = @[@"Sunday",@"Monday",@"Tuesday",@"Wednesday",@"Thursday",@"Friday",@"Saturday"];
+        }
         for (int i = 0 ; i < arr.count ; i++) {
             UILabel * lb = [[UILabel alloc] initWithFrame:CGRectMake(10, 55+ i*50+15, 100, 20)];
             lb.font = [UIFont systemFontOfSize:14];
@@ -83,7 +102,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        
+         NSInteger language = [[NSUserDefaults standardUserDefaults]integerForKey:@"language"];
         
         UIButton * clossBt =[[UIButton alloc] initWithFrame:self.bounds];
         [self addSubview:clossBt];
@@ -105,7 +124,12 @@
         UILabel * lb1 =[[UILabel alloc] initWithFrame:CGRectMake(10, 25, self.blackV.width - 20, 20)];
         lb1.textColor = [UIColor whiteColor];
         lb1.font = [UIFont systemFontOfSize:15 weight:0.2];
-        lb1.text = @"编辑闹钟";
+
+        NSString * str1 = @"编辑闹钟";
+        if (language == 1) {
+            str1 = @"Edit the alarm clock";
+        }
+        lb1.text = str1;
         self.titleLB = lb1;
         lb1.textAlignment = NSTextAlignmentCenter;
         [self.blackV addSubview:lb1];
@@ -125,6 +149,9 @@
         lb2.textColor = [UIColor whiteColor];
         lb2.font = [UIFont systemFontOfSize:14];
         lb2.text = @"重复";
+        if (language == 1) {
+            lb2.text = @"repeat";
+        }
         [self.blackV addSubview:lb2];
         
         
@@ -136,7 +163,9 @@
         self.timeLB.font = [UIFont systemFontOfSize:13];
         [self.blackV addSubview:self.timeLB];
         self.timeLB.text = @"永不 >";
-        
+        if (language == 1) {
+            self.timeLB.text = @"never >";
+        }
         self.chooseBt = [[UIButton alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(self.datePicker.frame) + 10+ 5, self.blackV.width - 20, 40)];
         [self.blackV addSubview:self.chooseBt];
         [self.chooseBt addTarget:self action:@selector(chooseAction) forControlEvents:UIControlEventTouchUpInside];
@@ -151,6 +180,9 @@
         lb3.textColor = [UIColor whiteColor];
         lb3.font = [UIFont systemFontOfSize:14];
         lb3.text = @"是否启用";
+        if (language == 1) {
+            lb3.text = @"Enabled";
+        }
         [self.blackV addSubview:lb3];
         
         self.switchBt = [[UISwitch alloc] initWithFrame:CGRectMake(self.blackV.width - 70, CGRectGetMaxY(backV.frame) + 10, 60, 30)];
@@ -174,6 +206,9 @@
         [confirmBt addTarget:self action:@selector(confirmAction:) forControlEvents:UIControlEventTouchUpInside];
         [confirmBt setTitle:@"确定" forState:UIControlStateNormal];
         
+        if (language==1) {
+            [confirmBt setTitle:@"Confirm" forState:UIControlStateNormal];
+        }
         
         
 
@@ -200,6 +235,12 @@
     if (model == nil) {
         [self.datePicker setDate:[NSDate date]];
         self.timeLB.text = @"永不 >";
+        NSInteger language = [[NSUserDefaults standardUserDefaults]integerForKey:@"language"];
+               
+        if (language == 1) {
+            self.timeLB.text = @"never >";
+        }
+        
     }else {
         if (self.model.date != nil) {
             [self.datePicker setDate:model.date];
@@ -261,10 +302,16 @@
         
     }else {
         
+        NSString * str1 = @"设备断开无法添加闹钟";
+        NSString * str2 = @"确定";
+         NSInteger language = [[NSUserDefaults standardUserDefaults]integerForKey:@"language"];
+        if (language==1) {
+            str2  = @"confirm";
+            str1 = @"Device disconnected unable to add alarm";
+            }
         
-        
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:@"设备断开无法添加闹钟" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction * action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:nil];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:str1 preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction * action = [UIAlertAction actionWithTitle:str2 style:(UIAlertActionStyleDefault) handler:nil];
         [alertController addAction:action];
         [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:nil];
         [self diss];
@@ -326,11 +373,21 @@
 - (void)setTimeWithArr:(NSArray *)arr {
     
     NSArray * arrTwo = @[@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六"];
+    NSInteger language = [[NSUserDefaults standardUserDefaults]integerForKey:@"language"];
+    if (language == 1) {
+        arrTwo = @[@"Sunday",@"Monday",@"Tuesday",@"Wednesday",@"Thursday",@"Friday",@"Saturday"];
+    }
     NSMutableArray * arrThree = @[].mutableCopy;
     if (arr.count == 0) {
         self.timeLB.text = @"永不 >";
+        if (language == 1) {
+            self.timeLB.text = @"never >";
+        }
     }else if (arr.count == 7){
        self.timeLB.text = @"每天 >";
+        if (language == 1) {
+            self.timeLB.text = @"everyday >";
+        }
     }else {
         for (int i = 0 ; i < arr.count; i++) {
               [arrThree addObject:arrTwo[[arr[i] intValue]]];

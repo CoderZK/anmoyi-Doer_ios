@@ -540,9 +540,12 @@
 //                                                                       characteristic:nil
 //                                                                           DeviceType:self.deviceType  language:self.language];
 //    [self.navigationController pushViewController:deviceVC animated:YES];
+    
+    
+    
 
-//    DeviceViewController *deviceVC = [[DeviceViewController alloc]init];
-//    [self.navigationController pushViewController:deviceVC animated:YES];
+    DeviceViewController *deviceVC = [[DeviceViewController alloc]initWithPeripheral:nil characteristic:nil  DeviceType:nil language:1];
+    [self.navigationController pushViewController:deviceVC animated:YES];
 
 }
 

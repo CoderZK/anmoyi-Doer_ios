@@ -23,13 +23,13 @@
     NSInteger language = [[NSUserDefaults standardUserDefaults]integerForKey:@"language"];
 
     if (language == 0) {
-        self.ibAboutLabel.text = @"关于杜勒";
-        self.ibVersionLabel.text = @"版本v1.0.1";
-        self.ibCopyRightLabel.text = @"登丰公司 版权所有";
+        self.ibAboutLabel.text = @"关于左右智能";
+        self.ibVersionLabel.text = @"版本v1.0.1";
+        self.ibCopyRightLabel.text = @"左右智能 版权所有";
     } else {
-        self.ibAboutLabel.text = @"ABOUT 左右智能";
+        self.ibAboutLabel.text = @"ABOUT ZUOYOU";
         self.ibVersionLabel.text = @"Rev v1.0.1";
-        self.ibCopyRightLabel.text = @"Copyright@2018 DengFeng. All Rights Reserverd.";
+        self.ibCopyRightLabel.text = @"Copyright@2020 ZUOYOU. All Rights Reserverd.";
     }
 }
 

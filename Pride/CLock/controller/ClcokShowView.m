@@ -29,6 +29,7 @@
 //        [self addSubview:clossBt];
 //        [clossBt addTarget:self action:@selector(diss) forControlEvents:UIControlEventTouchUpInside];
         
+         NSInteger language = [[NSUserDefaults standardUserDefaults]integerForKey:@"language"];
         
         self.backgroundColor =[UIColor colorWithWhite:0 alpha:0.1];
         self.blackV = [[UIView alloc] initWithFrame:CGRectMake(30,(SCREEN_HEIGHT - 360)/2, SCREEN_WIDTH-60, 360)];
@@ -46,14 +47,14 @@
         self.timeLB.textAlignment = NSTextAlignmentCenter;
         self.timeLB.font = [UIFont systemFontOfSize:20];
         [self.blackV addSubview:self.timeLB];
-        self.timeLB.text = @"周一";
+        self.timeLB.text = @"";
         
        self.tiemLBTwo = [[UILabel alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(self.timeLB.frame) + 10 , self.blackV.width - 20, 20)];
        self.tiemLBTwo.textColor = [UIColor whiteColor];
        self.tiemLBTwo.textAlignment = NSTextAlignmentCenter;
        self.tiemLBTwo.font = [UIFont systemFontOfSize:14];
        [self.blackV addSubview:self.tiemLBTwo];
-       self.tiemLBTwo.text = @"周一";
+       self.tiemLBTwo.text = @"";
         
        
            NSDate *now = [NSDate date];
@@ -70,12 +71,18 @@
            NSInteger second = [dateComponent second];
         NSInteger week = [[zkSignleTool shareTool] getWeekDayFordate];
         NSArray * arr = @[@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六"];
-        
+        if (language == 1) {
+            arr = @[@"Sunday",@"Monday",@"Tuesday",@"Wednesday",@"Thursday",@"Friday",@"Saturday"];
+        }
         self.tiemLBTwo.text = [NSString stringWithFormat:@"%d月%d  %@",month,day,arr[week]];
+        if (language == 1) {
+            self.tiemLBTwo.text = [NSString stringWithFormat:@"%dMonth%d  %@",month,day,arr[week]];
+        }
         
         UIImageView * imgV = [[UIImageView alloc] initWithFrame:CGRectMake((self.blackV.width - 130)/2, CGRectGetMaxY(self.tiemLBTwo.frame) + 15, 130, 130)];
+        imgV.image = [UIImage imageNamed:@"nz"];
         [self.blackV addSubview:imgV];
-        imgV.backgroundColor = [UIColor redColor];
+//        imgV.backgroundColor = [UIColor redColor];
         
         UIButton * confirmBt = [[UIButton alloc] initWithFrame:CGRectMake((self.blackV.width - 100)/2 , CGRectGetMaxY(imgV.frame) + 30   , 100, 40)];
 //        confirmBt.backgroundColor = [UIColor colorWithRed:147/255.0 green:91/255.0 blue:24/255.0 alpha:1.0];
@@ -89,7 +96,9 @@
         [confirmBt addTarget:self action:@selector(confirmAction:) forControlEvents:UIControlEventTouchUpInside];
         [confirmBt setTitle:@"确定" forState:UIControlStateNormal];
         
-        
+        if (language==1) {
+                  [confirmBt setTitle:@"Confirm" forState:UIControlStateNormal];
+            }
         
 
     }
