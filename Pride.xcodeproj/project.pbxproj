@@ -108,7 +108,7 @@
 		061F7B801FE38152007D2AE7 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		061F7B871FE38546007D2AE7 /* RKDropdownAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKDropdownAlert.h; sourceTree = "<group>"; };
 		061F7B881FE38546007D2AE7 /* RKDropdownAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKDropdownAlert.m; sourceTree = "<group>"; };
-		06395CD11FDE83DF0055BB08 /* Pride.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Pride.app; path = "左右智能.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06395CD11FDE83DF0055BB08 /* 左右智能.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "左右智能.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06395CDB1FDE83DF0055BB08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06395CDD1FDE83DF0055BB08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06395CE01FDE83DF0055BB08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -327,7 +327,7 @@
 		06395CD21FDE83DF0055BB08 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				06395CD11FDE83DF0055BB08 /* Pride.app */,
+				06395CD11FDE83DF0055BB08 /* 左右智能.app */,
 				06395CE91FDE83E00055BB08 /* PrideTests.xctest */,
 				06395CF41FDE83E00055BB08 /* PrideUITests.xctest */,
 			);
@@ -666,7 +666,7 @@
 			);
 			name = Pride;
 			productName = Pride;
-			productReference = 06395CD11FDE83DF0055BB08 /* Pride.app */;
+			productReference = 06395CD11FDE83DF0055BB08 /* 左右智能.app */;
 			productType = "com.apple.product-type.application";
 		};
 		06395CE81FDE83E00055BB08 /* PrideTests */ = {
@@ -1014,6 +1014,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -1033,6 +1034,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;

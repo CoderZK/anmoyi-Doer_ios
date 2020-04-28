@@ -303,6 +303,7 @@
         button.frame = CGRectMake((SCREEN_WIDTH - 40)/2, 0.8 *SCREEN_WIDTH + 90-30, 40, 40);
     }
     
+
     
 //    UIImageView *leftLayLineView = [[UIImageView alloc]initWithFrame:CGRectMake(bottomBtnWidth + aWidth, 3, 5, 9)];
 //    leftLayLineView.image = [UIImage imageNamed:@"layline"];

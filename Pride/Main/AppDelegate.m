@@ -112,6 +112,8 @@
     [[NSRunLoop currentRunLoop] addTimer:_timerOne  forMode:NSRunLoopCommonModes];
     
     
+//    [NSThread sleepForTimeInterval:100.000];
+    
     
     return YES;
 }
@@ -281,7 +283,7 @@
         self.bgTask = UIBackgroundTaskInvalid;
     }];
     //开启定时器 不断向系统请求后台任务执行的时间
-    self.TTTT = [NSTimer scheduledTimerWithTimeInterval:25.0 target:self selector:@selector(applyForMoreTime) userInfo:nil repeats:YES];
+    self.TTTT = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(applyForMoreTime) userInfo:nil repeats:YES];
     [self.TTTT fire];
 }
 
